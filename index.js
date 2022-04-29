@@ -1,72 +1,120 @@
-const mariadb = require('mariadb');
+const mongo = require('mongodb');
 const express = require('express');
 const bp = require('body-parser');
-const db = require('./mariadb');
 const app = express();
 const port = process.env.PORT || 8080;
+const db = mongoose.connect("mongodb://localhost/courseAPI");
+const router = express.Router();
 
-app.use(bp.json());
-app.use(bp.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-/*the webapp should be displayed on the homepage upon entering the site. the route for this is "/" but can be changed later on if that dosent suit our needs*/
+router
+    .route("/apis")
+    .post((req, res) => {
+        const course = new Course(req.body);
+        course.save();
+        return res.status(201).json(course);
+    })
+    .get((req, res) => {
+        const course = new Course(req.body);
+        const query = {};
+        if (req.query.genre) {
+            query.InstName = req.query.InstName;
+        }
+        Course.find(query, (err, courses) => {
+            if (err) {
+                return res.send(err);
+            }
+            return res.json(courses);
+        })
+    })
+    .delete((req, res) => {
+        const course = new Course(req.body);
+        const query = {};
+        Course.find(query, (err, courses) => {
+            if (err) {
+                return res.send(err);
+            }
+            for (i of courses) { i.remove() };
+            return res.json(courses);
+        })
+    });
 
-/*this is the router for setting up the logic of the CRUD application. this is a template need to add more later */
+courseRouter.use("/api/:id", (req, res, next) => {
+    Course.findById(req.params.id, (err, course) => {
+        if (err) {
+            return res.send(err);
+        }
+        if (course) {
 
-
-// GET
-app.get('/tasks', async (req, res) => {
-    try {
-        const result = await db.pool.query("select * from tasks");
-        res.send(result);
-    } catch (err) {
-        throw err;
-    }
+            req.course = course;
+            return next();
+        }
+        return res.sendStatus(404);
+    });
 });
- 
-// POST
-app.post('/tasks', async (req, res) => {
-    let task = req.body;
-    try {
-        const result = await db.pool.query("insert into tasks (description) values (?)", [task.description]);
-        res.send(result);
-    } catch (err) {
-        throw err;
-    }
+
+courseRouter
+    .route("/api/:id")
+    .post((req, res) => {
+        const course = new Course(req.body);
+        course.save();
+        return res.status(201).json(course);
+    })
+
+    .delete((req, res) => {
+        req.course.remove((err) => {
+            if (err) {
+                return res.send(err);
+            }
+            return res.json(req.course);
+        });
+    })
+    .patch((req, res) => {
+        const { course } = req;
+        course.title = req.body.Dateandtime;
+        course.author = req.body.course;
+        course.genre = req.body.Location;
+        course.read = req.body.InstName;
+        course.save();
+        return res.json(course);
+    })
+
+    .put((req, res) => {
+        const { course } = req;
+        course.title = req.body.Dateandtime;
+        course.author = req.body.course;
+        course.genre = req.body.Location;
+        course.read = req.body.InstName;
+        course.save();
+        return res.json(course);
+    })
+    .get((req, res) => {
+
+        Course.findById(req.params.id, (err, course) => {
+            if (err) {
+                return res.send(err);
+            }
+            return res.json(course);
+        });
+    });
+
+
+app.use("/api", courseRouter);
+
+app.get("/", (req, res) => {
+    const course = new Course(req.body);
+    res.send("Welcome to my API!");
 });
 
-//PUT
-app.put('/tasks', async (req, res) => {
-    let task = req.body;
-    try {
-        const result = await db.pool.query("update tasks set description = ?, completed = ? where id = ?", [task.description, task.completed, task.id]);
-        res.send(result);
-    } catch (err) {
-        throw err;
-    } 
-});
-
-//Delete
-app.delete('/tasks', async (req, res) => {
-    let id = req.query.id;
-    try {
-        const result = await db.pool.query("delete from tasks where id = ?", [id]);
-        res.send(result);
-    } catch (err) {
-        throw err;
-    } 
-});
-
-
-
-//basic routes for the application
-
-/*app.get("/", (req, res) => {
-	res.send("Welcome to our Pomodoro webapp (working name needs to be change later)");/*This is the main page our app will be hosted on unless this changes in the next 5 weeks. eventually we will change what is in the res.send
-});*/
 
 app.listen(port, () => {
-	console.log(`Running on port ${port}`);/*this is to check if the app is running correctly*/
+    console.log(`Running on port ${port}`);
 });
+
+
+
 
 	
 

@@ -1,73 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <script src="test.js" defer></script>
-		<title>StudyTime</title>
-	</head>
-    <header>
-		<nav id="myNav" class="my_Nav">
-			<h1><a href="index.html" class="nav-home" id="home">Our App</a></h1>
-			<h2><a href="login.html" class="nav-home" id="login">Login/Sign Up</a></h2>
-		</nav>
-    <span id="theme-toggle"><input type="checkbox"></span>
-	</header>	
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="../src/CSS/style.css">
+  <title>signup</title>
+</head>
+<header>
+  <nav id="myNav" class="my_Nav">
+    <h1><a href="index.html" class="nav-home" id="home">Our App</a></h1>
+    <h2><a href="login.html" class="nav-home" id="login">Login/Sign Up</a></h2>
+  </nav>
+  <span class="theme-toggle"><input type="checkbox"></span>
+</header>
 
 
-	<body class="body">
-      <div class="login-page">
-        <div class="form">
-          <form>
-            <input type="text" placeholder="first name" />
-            <input type="text" placeholder="last name" />
-            <input type="text" placeholder="email address" />
-            <input type="text" placeholder="pick a username" />
-            <input type="password" id="password" placeholder="set a password" />
-            <i class="fas fa-eye" onclick="show()"></i>
-            <br>
-            <br>
-          </form>
+<body class="body">
+  <div class="login-page">
+    <div class="form">
+      <form>
+        <input type="text" placeholder="full name" />
+        <input type="text" placeholder="email address" />
+        <input type="text" placeholder="pick a username" />
+        <input type="password" id="password" placeholder="set a password" />
+        <i class="fas fa-eye" onclick="show()"></i>
+        <br>
+        <br>
+      </form>
 
-          <form class="login-form">
-            <button type="button" onclick="window.location.href='login.html'">
-              SIGN UP
-            </button>
-          </form>
-        </div>
-      </div>
-    </body>
-    <script>
-      var check = false
-      function show() {
-        var password = document.getElementById("password");
-        var icon = document.querySelector(".fas");
+      <form class="login-form">
+        <button type="button" onclick="window.location.href='login.html'">
+          SIGN UP
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+<script>
+  function show() {
+    var password = document.getElementById("password");
+    var icon = document.querySelector(".fas");
 
-        // ========== Checking type of password ===========
-        if (password.type === "password") {
-          password.type = "text";
-        } else {
-          password.type = "password";
-        }
-      }
-      function LDmode(){
-        const dark = document.querySelector("body")
-        if (check == false){
-          dark.classList.replace('.light-theme', '.dark-theme')
-          check = true
-        } else if (check == true){
-          dark.classList.replace('.dark-theme', '.light-theme')
-          check = false
-        }
-      }
-      function createCheck(){
-        var clickBox = document.querySelector('#theme-toggle')
-        clickBox.addEventListener('click', LDmode)
-      }
-      createCheck()
-    </script>
+    // ========== Checking type of password ===========
+    if (password.type === "password") {
+      password.type = "text";
+    } else {
+      password.type = "password";
+    }
+  }
+  function LDmode(){
+  const dark = document.querySelector("body")
+  if (check == false){
+    dark.classList.replace('light-theme', 'dark-theme')
+    check = true
+  } else if (check == true){
+    dark.classList.replace('dark-theme', 'light-theme')
+    check = false
+    }
+  }
+  function createCheck(){
+    var clickBox = document.querySelector('.theme-toggle')
+    clickBox.addEventListener('click', LDmode)
+  }
+</script>
 
 
-	</body>
+
+</body>
+
 </html>

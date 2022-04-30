@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="test.js" defer></script>
 		<title>StudyTime</title>
 	</head>
     <header>
@@ -10,6 +12,7 @@
 			<h1><a href="index.html" class="nav-home" id="home">Our App</a></h1>
 			<h2><a href="login.html" class="nav-home" id="login">Login/Sign Up</a></h2>
 		</nav>
+    <span id="theme-toggle"><input type="checkbox"></span>
 	</header>	
 
 
@@ -17,7 +20,8 @@
       <div class="login-page">
         <div class="form">
           <form>
-            <input type="text" placeholder="full name" />
+            <input type="text" placeholder="first name" />
+            <input type="text" placeholder="last name" />
             <input type="text" placeholder="email address" />
             <input type="text" placeholder="pick a username" />
             <input type="password" id="password" placeholder="set a password" />
@@ -35,6 +39,7 @@
       </div>
     </body>
     <script>
+      var check = false
       function show() {
         var password = document.getElementById("password");
         var icon = document.querySelector(".fas");
@@ -46,8 +51,22 @@
           password.type = "password";
         }
       }
+      function LDmode(){
+        const dark = document.querySelector("body")
+        if (check == false){
+          dark.classList.replace('.light-theme', '.dark-theme')
+          check = true
+        } else if (check == true){
+          dark.classList.replace('.dark-theme', '.light-theme')
+          check = false
+        }
+      }
+      function createCheck(){
+        var clickBox = document.querySelector('#theme-toggle')
+        clickBox.addEventListener('click', LDmode)
+      }
+      createCheck()
     </script>
-
 
 
 	</body>

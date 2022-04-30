@@ -14,4 +14,22 @@
 	<body>
 		<p>testing to see if this works</p>
 	</body>
+	
+	<script>
+      function LDmode(){
+        const dark = document.querySelector("body")
+        if (check == false){
+          dark.classList.replace('.light-theme', '.dark-theme')
+          check = true
+        } else if (check == true){
+          dark.classList.replace('.dark-theme', '.light-theme')
+          check = false
+        }
+      }
+      function createCheck(){
+        var clickBox = document.querySelector('#theme-toggle')
+        clickBox.addEventListener('click', LDmode)
+      }
+      createCheck()
+	</script>
 </html>

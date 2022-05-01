@@ -10,7 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="../src/CSS/style.css">
+  <link rel="stylesheet" href="../src/CSS/style.css">
   <title>login</title>
 </head>
 <header>
@@ -53,21 +53,21 @@
         password.type = "password";
       }
     };
-    function LDmode(){
-        const dark = document.querySelector("body")
-        if (check == false){
-          dark.classList.replace('.light-theme', '.dark-theme')
-          check = true
-        } else if (check == true){
-          dark.classList.replace('.dark-theme', '.light-theme')
-          check = false
-        }
+    function LDmode() {
+      const dark = document.querySelector("body")
+      if (check == false) {
+        dark.classList.replace('.light-theme', '.dark-theme')
+        check = true
+      } else if (check == true) {
+        dark.classList.replace('.dark-theme', '.light-theme')
+        check = false
       }
-      function createCheck(){
-        var clickBox = document.querySelector('.theme-toggle')
-        clickBox.addEventListener('click', LDmode)
-      }
-      createCheck()
+    }
+    function createCheck() {
+      var clickBox = document.querySelector('.theme-toggle')
+      clickBox.addEventListener('click', LDmode)
+    }
+    createCheck()
   </script>
 </body>
 

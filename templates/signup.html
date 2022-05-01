@@ -11,7 +11,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
     rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="./css/style.css">
+=======
+  <link rel="stylesheet" href="../src/CSS/style.css">
+>>>>>>> refs/remotes/origin/ft1
   <title>signup</title>
 </head>
 <header>
@@ -56,17 +60,17 @@
       password.type = "password";
     }
   }
-  function LDmode(){
-  const dark = document.querySelector("body")
-  if (check == false){
-    dark.classList.replace('light-theme', 'dark-theme')
-    check = true
-  } else if (check == true){
-    dark.classList.replace('dark-theme', 'light-theme')
-    check = false
+  function LDmode() {
+    const dark = document.querySelector("body")
+    if (check == false) {
+      dark.classList.replace('light-theme', 'dark-theme')
+      check = true
+    } else if (check == true) {
+      dark.classList.replace('dark-theme', 'light-theme')
+      check = false
     }
   }
-  function createCheck(){
+  function createCheck() {
     var clickBox = document.querySelector('.theme-toggle')
     clickBox.addEventListener('click', LDmode)
   }

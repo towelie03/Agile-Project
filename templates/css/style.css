@@ -5,7 +5,77 @@
     background-color: #e5e4e3;
 }
 
-/* LEADING TITLES */
+/* TITLE ON MAIN PAGE */
+
+.title h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1;
+    letter-spacing: -1;
+    text-align: center;
+    color: #fff;
+}
+
+.title p {
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* NAVIGATION */
+nav {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #171a1b;
+    font-family: "Aresenal", sans-serif;
+    position: sticky;
+    top: 0px;
+}
+
+.nav_link_list {
+    display: flex;
+    top: 1em;
+    background-color: #171a1b;
+}
+
+.nav_link_a {
+    margin: 0px;
+    color: #171a1b;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    color: #ececec;
+    padding: 14px 16px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: opacity 300ms ease;
+}
+
+.nav_link {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* REFERENCE CODE FOR FUTURE POTENTIAL USE */
+
+/* LEADING TITLES
 span,
 h1,
 h2,
@@ -36,7 +106,7 @@ h6 {
 }
 
 /* CLASSES */
-.BCIT {
+/* .BCIT {
     font-family: "Poppins", sans-serif;
     margin: 0.4em;
     font-weight: 400;
@@ -105,7 +175,7 @@ h6 {
 }
 
 /*  MISCELLANEOUS */
-body {
+/* body {
     background-color: #171a1b;
 }
 
@@ -119,7 +189,7 @@ p {
     flex-direction: row;
     /* padding-right: 58em;
     padding-left: 1em; */
-    font-size: 16px;
+/* font-size: 16px;
 
     font-family: "Noto Serif Display", serif;
 }
@@ -146,46 +216,4 @@ a:hover {
 
 a:link {
     color: #171a1b;
-}
-
-/* NAVIGATION */
-nav {
-    height: auto;
-    width: 100%;
-    margin: 0 auto;
-    background-color: #171a1b;
-    font-family: "Aresenal", sans-serif;
-    position: sticky;
-    top: 0px;
-}
-
-.nav_link_list {
-    display: flex;
-    top: 1em;
-    background-color: #171a1b;
-}
-
-.nav_link_a {
-    margin: 0px;
-    color: #171a1b;
-    font-weight: 700;
-    display: flex;
-    justify-content: left;
-    color: #ececec;
-    padding: 14px 16px;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: opacity 300ms ease;
-}
-
-.nav_link {
-    list-style-type: none;
-    padding-left: 1em;
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-}
+}   */

@@ -26,7 +26,13 @@ app.get("/story.html", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/story.html"));
 });
 
+app.get("/login.html", (req, res) => {
+	res.sendFile(path.join(__dirname + "/templates/login.html"));
+});
 
+app.get("/signup.html", (req, res) => {
+	res.sendFile(path.join(__dirname + "/templates/signup.html"));
+});
 
 
 app.listen(port, () => {

@@ -2,16 +2,6 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Story</title>
-=======
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +10,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="../src/CSS/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="src/app.js" defer></script>
   <title>Story</title>
->>>>>>> refs/remotes/origin/ft1
 </head>
 
 <body>
@@ -52,10 +42,46 @@
     <h1><span class="BCIT">TO BE</span>STYLED</h1>
   </header>
   </div>
+  <div class="calendar">
+    <div id="cal-head">
+        <button id="prev-month"><<</button>
+        <select id="month">
+            <option value="jan">JANUARY</option>
+            <option value="feb">FEBRUARY</option>
+            <option value="mar">MARCH</option>
+            <option value="apr">APRIL</option>
+            <option value="may">MAY</option>
+            <option value="june">JUNE</option>
+            <option value="july">JULY</option>
+            <option value="aug">AUGUST</option>
+            <option value="sept">SEPTEMBER</option>
+            <option value="oct">OCTOBER</option>
+            <option value="nov">NOVEMBER</option>
+            <option value="dec">DECEMBER</option>
+        </select>
+        <input type="number" id="year" placeholder="YEAR" min="0" max="">
+        <button id="next-month">>></button>
+    </div>
+    <div id="cal-body">
+        <table>
+            <thead>
+                <tr class="days">
+                    <td id="sun">S</td>
+                    <td id="mon">M</td>
+                    <td id="tues">Tu</td>
+                    <td id="wed">W</td>
+                    <td id="thur">Th</td>
+                    <td id="fri">F</td>
+                    <td id="sat">Sa</td>
+                </tr>
+            </thead>
+            <tbody id="cal-days">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
 </body>
-<<<<<<< HEAD
-</html>
-=======
 
 </html>
->>>>>>> refs/remotes/origin/ft1

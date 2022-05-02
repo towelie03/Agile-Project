@@ -82,6 +82,5 @@ function updateMonth(specification) {
                 }
         }
     }
+    updateCalendar();
 }
-
-updateCalendar();

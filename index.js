@@ -3,15 +3,12 @@ const mongoose = require('mongoose');
 const express = require('express');
 const bp = require('body-parser');
 const path = require('path');
-const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 8080;
-const db = mongoose.connect("mongodb://localhost:27017/users");
+const db = require("./config/db")
 const router = express.Router();
-const corsOptions = {
-	origin: "http://localhost:8081"
-};
+
 
 app.use("/", router);
 

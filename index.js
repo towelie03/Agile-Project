@@ -16,19 +16,19 @@ app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/index.html"));
 });
 
-app.get("/about.html", (req, res) => {
+app.get("/about", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/about.html"));
 });
 
-app.get("/story.html", (req, res) => {
+app.get("/story", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/story.html"));
 });
 
-app.get("/login.html", (req, res) => {
+app.get("/login", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/login.html"));
 });
 
-app.get("/signup.html", (req, res) => {
+app.get("/signup", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/signup.html"));
 });
 

@@ -53,7 +53,6 @@ nav {
 .nav_link_list {
     display: flex;
     top: 1em;
-    background-color: #171a1b;
 }
 
 .nav_link_a {
@@ -62,7 +61,7 @@ nav {
     font-weight: 700;
     display: flex;
     justify-content: left;
-    color: #ececec;
+    color: #000000;
     padding: 14px 16px;
     font-size: 1.5em;
     text-decoration: none;

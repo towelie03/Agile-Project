@@ -32,6 +32,10 @@ app.get("/signup", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/signup.html"));
 });
 
+app.get("/timers", (req, res) => {
+	res.sendFile(path.join(__dirname + "/templates/timers.html"))
+})
+
 
 app.listen(port, () => {
     console.log(`Running on port ${port}`);

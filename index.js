@@ -3,14 +3,27 @@ const mongoose = require('mongoose');
 const express = require('express');
 const bp = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 8080;
 const db = mongoose.connect("mongodb://localhost:27017/users");
 const router = express.Router();
-
+const corsOptions = {
+	origin: "http://localhost:8081"
+};
 
 app.use("/", router);
+
+app.use(cors(corsOptions));
+
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/test", (req, res) => {
+	res.json({ msg: "This is a test for the mongo auth" });
+});
 
 app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/index.html"));

@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/timers.css" type="text/css" rel="stylesheet"/>
+    <script defer src="src/timers.js"></script>
     <title>Timers</title>
 </head>
 
 <body>
     <main class="app">
-        <progress id="js-progress" value="0"></progress>
-        <div class="progress-bar"></div>
         <div class="timer">
           <div class="button-group mode-buttons" id="js-mode-buttons">
             <button
@@ -22,14 +21,14 @@
               Study
             </button>
             <button
-              data-mode="shortBreak"
+              data-mode="short_break"
               class="button mode-button"
               id="js-short-break"
             >
               Short Break
             </button>
             <button
-              data-mode="longBreak"
+              data-mode="long_break"
               class="button mode-button"
               id="js-long-break"
             >
@@ -46,6 +45,5 @@
           </button>
         </div>
       </main>
-      <script src="src/timers.js"></script>
 </body>
 </html>

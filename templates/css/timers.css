@@ -10,8 +10,8 @@ html {
   
 :root {
     --study: hsl(223, 25%, 40%);
-    --shortBreak: hsl(48, 23%, 40%);
-    --longBreak: hsl(105, 16%, 40%);
+    --short_break: hsl(48, 23%, 40%);
+    --long_break: hsl(105, 16%, 40%);
 }
   
 body {
@@ -19,22 +19,6 @@ body {
     transition: background-color 1s ease;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     user-select: none;
-}
-  
-progress {
-    border-radius: 2px;
-    width: 100%;
-    height: 12px;
-    position: fixed;
-    top: 0;
-}
-  
-progress::-webkit-progress-bar {
-   background-color: rgba(0, 0, 0, 0.1);;
-}
-  
-progress::-webkit-progress-value {
-    background-color: #fff;
 }
   
 .timer {

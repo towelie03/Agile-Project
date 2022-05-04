@@ -1,16 +1,18 @@
-const mongo = require('mongodb');
-const mongoose = require('mongoose');
-const express = require('express');
-const bp = require('body-parser');
-const path = require('path');
+import express from 'express';
+import mongoose from 'mongoose';
+import mongo from 'mongodb';
+import bp from 'body-parser';
+import path from 'path';
+//import db from './config/db.js';
 
 const app = express();
-const db = require("./config/db")
+
 const router = express.Router();
+const __dirname = path.resolve();
 
 app.use("/", router);
 
-app.use(express.json());
+app.use(bp.json());
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -38,12 +40,10 @@ app.get("/signup", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/signup.html"));
 });
 
-app.use(express.static(__dirname + "/templates"))
-
 app.get("/timers", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/timers.html"))
 })
 
 
-module.exports = app;
+export default app;
 

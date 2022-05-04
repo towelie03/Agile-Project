@@ -10,16 +10,19 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  <script type="module" src="./src/nav.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <script type="module" src="src/nav.js"></script> -->
+  <script defer src="src/script.js"></script>
   <title>index</title>
 </head>
 
-<span class="theme-toggle"><input type="checkbox"></span>
-
 <body>
-  <!-- HOME BUTTON -->
-  <!-- <div class="app">
+  <div class="main-container" class="dark-theme">
+    <div class="theme-toggle">
+      <button id="theme">click me</button>
+    </div>
+    <!-- HOME BUTTON -->
+    <!-- <div class="app">
     <header>
       <div class="container">
         <div class="header-section d-flex justify-content-between align-items-center">
@@ -29,8 +32,8 @@
             </a>
           </div> -->
 
-  <!-- NAVVVVV -->
-  <!-- <div class="header">
+    <!-- NAVVVVV -->
+    <!-- <div class="header">
             <ul class="nav">
               <a class="nav-bar" href="index.html">Home</a>
               <li class="nav-item active"></li>
@@ -44,13 +47,12 @@
                     ">About</a>
               </li> -->
 
-  </header>
-  <!-- HEADER -->
-  <!-- <div class="title">
+    <!-- HEADER -->
+    <!-- <div class="title">
     <h1>Pomodoro Story</h1>
     <p>Studying is ... X-UA-Compatible</p>
-
-  </div> -->
+ -->
+  </div>
 
   <!-- NAVVVVVV -->
   <nav>
@@ -85,34 +87,10 @@
             link__hover-effect
             "> Login/Signup</a>
       </li>
+    </ul>
   </nav>
-  </ul>
-  </nav>
 
-
-
-
-
-  <header>
-    <h1><span class="PROJECT">AGILE&nbsp;</span>2911</h1>
-    <h2>to be styled</h2>
-  </header>
-  <script>
-    function LDmode() {
-      const dark = document.querySelector("body")
-      if (check == false) {
-        dark.classList.replace('light-theme', 'dark-theme')
-        check = true
-      } else if (check == true) {
-        dark.classList.replace('dark-theme', 'light-theme')
-        check = false
-      }
-    }
-    function createCheck() {
-      var clickBox = document.querySelector('.theme-toggle')
-      clickBox.addEventListener('click', LDmode)
-    }	  
-  </script>
+  </div>
 </body>
 
 </html>

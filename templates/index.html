@@ -81,20 +81,7 @@
     <h2>to be styled</h2>
   </header>
   <script>
-    function LDmode() {
-      const dark = document.querySelector("body")
-      if (check == false) {
-        dark.classList.replace('light-theme', 'dark-theme')
-        check = true
-      } else if (check == true) {
-        dark.classList.replace('dark-theme', 'light-theme')
-        check = false
-      }
-    }
-    function createCheck() {
-      var clickBox = document.querySelector('.theme-toggle')
-      clickBox.addEventListener('click', LDmode)
-    }	  
+    var check = false
   </script>
 </body>
 

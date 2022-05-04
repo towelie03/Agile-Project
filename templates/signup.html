@@ -17,9 +17,10 @@
   <link rel="stylesheet" href="./css/style.css">
 
   <link rel="stylesheet" href="./css/style.css">
-
+  <link rel="stylesheet" href="./css/darkmode.css">
   <link rel="stylesheet" href="../src/CSS/style.css">
 
+  <script src="./src/app.js" defer></script>
   <title>signup</title>
 </head>
 <header>
@@ -27,28 +28,18 @@
     <h1><a href="index.html" class="nav-home" id="home">Our App</a></h1>
     <h2><a href="login.html" class="nav-home" id="login">Login/Sign Up</a></h2>
   </nav>
-  <span class="theme-toggle"><input type="checkbox"></span>
+  <button onclick="LDmode()">Toggle dark mode</button>
 </header>
 
 
-<body class="body">
-  <div class="login-page">
+<body>
+  <div class="login-page light-theme">
     <div class="form">
       <form>
         <input type="text" placeholder="full name" required />
         <input type="text" placeholder="email address" required />
         <input type="text" placeholder="username" required />
         <input type="password" id="password" placeholder="password" required />
-        <input type="text" placeholder="full name" />
-        <input type="text" placeholder="email address" />
-        <input type="text" placeholder="username" />
-        <input type="password" id="password" placeholder="password" />
-
-        <input type="text" placeholder="full name" required />
-        <input type="text" placeholder="email address" required />
-        <input type="text" placeholder="username" required />
-        <input type="password" id="password" placeholder="password" required />
-
         <i class="fas fa-eye" onclick="show()"></i>
         <br>
         <br>
@@ -63,6 +54,7 @@
   </div>
 </body>
 <script>
+  var check = false
   function show() {
     var password = document.getElementById("password");
     var icon = document.querySelector(".fas");
@@ -73,20 +65,6 @@
     } else {
       password.type = "password";
     }
-  }
-  function LDmode() {
-    const dark = document.querySelector("body")
-    if (check == false) {
-      dark.classList.replace('light-theme', 'dark-theme')
-      check = true
-    } else if (check == true) {
-      dark.classList.replace('dark-theme', 'light-theme')
-      check = false
-    }
-  }
-  function createCheck() {
-    var clickBox = document.querySelector('.theme-toggle')
-    clickBox.addEventListener('click', LDmode)
   }
 </script>
 

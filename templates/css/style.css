@@ -1,3 +1,11 @@
+:root {
+    --not-white: #fffaf3;
+    --not-black: #191724;
+    --not-grey:  #393552;
+    --hdr-hght:  5rem;
+    --lrg-txt:   2.2rem;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -228,13 +236,6 @@ a:link {
     color: #171a1b;
 }   */
 
-:root {
-    --not-white: #fffaf3;
-    --not-black: #191724;
-    --not-grey:  #393552;
-    --hdr-hght:  5rem;
-    --lrg-txt:   2.2rem;
-}
 
 .light-theme {
     background-color: var(--not-white);

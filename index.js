@@ -5,14 +5,10 @@ const bp = require('body-parser');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 8080;
 const db = require("./config/db")
 const router = express.Router();
 
-
 app.use("/", router);
-
-app.use(cors(corsOptions));
 
 app.use(express.json());
 
@@ -48,7 +44,6 @@ app.get("/timers", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/timers.html"))
 })
 
-app.listen(port, () => {
-    console.log(`Running on port ${port}`);
-    console.log('press CTRL + C to quit');
-});
+
+module.exports = app;
+

@@ -17,7 +17,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="../src/CSS/style.css">
-
+  <link rel="stylesheet" href="./css/style.css">
   <title>login</title>
 </head>
 
@@ -25,10 +25,10 @@
   <h1><a href="index.html" class="nav-home" id="home">Our App</a></h1>
   <h2><a href="login.html" class="nav-home" id="login">Login/Sign Up</a></h2>
 </nav>
-<span class="theme-toggle"><input type="checkbox"></span>
+<button onclick="LDmode()">Toggle dark mode</button>
 
 <body class="body">
-  <div class="login-page">
+  <div class="login-page light-theme">
     <div class="form">
       <form>
         <input type="text" placeholder="&#xf007;  username" />
@@ -47,6 +47,7 @@
   </div>
 
   <script>
+    var check = false
     function show() {
       var password = document.getElementById("password");
       var icon = document.querySelector(".fas")
@@ -60,20 +61,16 @@
       }
     };
     function LDmode() {
-      const dark = document.querySelector("body")
-      if (check == false) {
-        dark.classList.replace('.light-theme', '.dark-theme')
+    const dark = document.querySelector(".login-page")
+    if (check == false) {
+        dark.classList.replace('light-theme', 'dark-theme')
         check = true
       } else if (check == true) {
-        dark.classList.replace('.dark-theme', '.light-theme')
+        dark.classList.replace('dark-theme', 'light-theme')
         check = false
-      }
     }
-    function createCheck() {
-      var clickBox = document.querySelector('.theme-toggle')
-      clickBox.addEventListener('click', LDmode)
-    }
-    createCheck()
+  }
+
   </script>
 </body>
 

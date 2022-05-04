@@ -1,7 +1,7 @@
 :root {
     --not-white: #fafafa;
     --not-black: #191724;
-    --not-grey: #393552;
+    --not-grey: #1e1e1e;
     --hdr-hght: 5rem;
     --lrg-txt: 2.2rem;
 }
@@ -11,9 +11,9 @@
     color: var(--not-black);
 }
 
-.dark-theme {
-    background-color: var(--not-grey);
-}
+/* .dark-theme {
+    background-color: var(black);
+} */
 
 * {
     margin: 0;
@@ -22,10 +22,20 @@
     box-sizing: border-box;
 }
 
+.btn:hover {
+    color: #dddddd;
+}
+
+
+.nav_link:hover {
+    text-decoration: none;
+}
+
+
 .btn {
     border: none;
     color: var(--not-white);
-
+    background-color: var(--not-grey);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -43,9 +53,6 @@
 
 }
 
-.btn {
-    background-color: var(--not-grey);
-}
 
 .main-container {
     height: 100vh;

@@ -1,26 +1,18 @@
-/* TITLE ON MAIN PAGE */
 :root {
     --not-white: #fffaf3;
-    --drk-white: #f2e9e1;
     --not-black: #191724;
-    --not-red: #eb6f92;
-    --not-blue: #31748f;
-    --not-green: #56949f;
     --not-grey: #393552;
-    --muted: #6e6a86;
     --hdr-hght: 5rem;
     --lrg-txt: 2.2rem;
 }
 
-
 .light-theme {
-    --bg-color: var(--not-white);
-    --bg-side: var(--drk-white);
-    --text: var(--not-black);
+    background-color: var(--not-white);
+    color: var(--not-black);
 }
 
 .dark-theme {
-    --bg-color: var(--not-grey);
+    background-color: var(--not-grey);
 }
 
 * {
@@ -28,6 +20,19 @@
     padding: 0;
     font-size: 10px;
     box-sizing: border-box;
+}
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--bg-color);
 }
 
 .title h1 {

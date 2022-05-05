@@ -1,3 +1,4 @@
+
 function navs() {
   // const nav_div = document.querySelector("#navbar")
   const nav_div = document.getElementById("navbar")

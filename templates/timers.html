@@ -1,96 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
-        rel="stylesheet">
-      <link rel="stylesheet" href="./css/style.css">
-      <title>index</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>index</title>
     <link href="css/timers.css" type="text/css" rel="stylesheet"/>
     <script defer src="src/timers.js"></script>
+    <script defer src="src/nav.js" ></script>
     <title>Timers</title>
 </head>
-<header>
-  <navbar></navbar>
-</header>
 <body>
-  
-
-    <main class="app">
-        <div class="timer">
-          <div class="button-group mode-buttons" id="js-mode-buttons">
-            <button
-              data-mode="study"
-              class="button active mode-button"
-              id="js-study"
-            >
-              Study
-            </button>
-            <button
-              data-mode="short_break"
-              class="button mode-button"
-              id="js-short-break"
-            >
-              Short Break
-            </button>
-            <button
-              data-mode="long_break"
-              class="button mode-button"
-              id="js-long-break"
-            >
-              Long Break
-            </button>
-          </div>
-          <div class="clock" id="js-clock">
-            <span id="js-minutes">25</span>
-            <span class="separator">:</span>
-            <span id="js-seconds">00</span>
-          </div>
-          <button class="main-button" data-action="start" id="js-btn">
-            Start
-          </button>
-        </div>
-      </main>
-      <div id="navbar">
-      </div> 
-      <nav>
-        <ul class="nav_link_list">
-          <li class="nav_link">
-            <a href="index.html" class="
-                nav_link_a
-                link__hover-effect
-                ">Home</a>
-          </li>
-          <li class="nav_link">
-            <a href="about.html" class="
-                nav_link_a
-                link__hover-effect
-                ">About</a>
-          </li>
-          <li class="nav_link">
-            <a href="story.html" class="
-                nav_link_a
-                link__hover-effect
-                ">Story</a>
-          </li>
-          <li class="nav_link">
-            <a href="timers.html" class="
-                nav_link_a
-                link__hover-effect
-                ">Timer</a>
-          </li>
-          <li class="nav_link">
-            <a href="login.html" class="
-                nav_link_a
-                link__hover-effect
-                "> Login/Signup</a>
-          </li>
-        </ul>
-      </nav>
+  <header>
+    <div id="navbar">
+    </div>
+  </header>
+  <main class="app">
+    <div class="timer">
+      <div class="button-group mode-buttons" id="js-mode-buttons">
+        <button
+          data-mode="study"
+          class="button active mode-button"
+          id="js-study"
+        >
+        Study
+        </button>
+        <button
+          data-mode="short_break"
+          class="button mode-button"
+          id="js-short-break"
+        >
+        Short Break
+        </button>
+        <button
+          data-mode="long_break"
+          class="button mode-button"
+          id="js-long-break"
+        >
+        Long Break
+        </button>
+      </div>
+      <div class="clock" id="js-clock">
+        <span id="js-minutes">25</span>
+        <span class="separator">:</span>
+        <span id="js-seconds">00</span>
+      </div>
+      <button class="main-button" data-action="start" id="js-btn">
+        Start
+      </button>
+    </div>
+  </main>
 </body>
 </html>

@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
-    rel="stylesheet">
-  <script defer src="src/script.js"></script>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- <script type="module" src="navbar.js"></script> -->
-  <script defer src="src/nav.js"></script>
-  <title>index</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <script defer src="src/timers.js"></script>
+    <script defer src="src/nav.js" ></script>
+    <title>Timers</title>
 </head>
-<header>
-  <div id="navbar">
-  </div>
-</header>
-
 <body>
-  <div class="login-page light-theme">
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor officiis aliquid natus explicabo illo
-      exercitationem beatae quisquam praesentium, voluptatibus, quo unde officia eaque. Incidunt dolorem voluptate quo
-      debitis illum cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-      nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-  </div>
+  <header>
+    <div id="navbar">
+    </div>
+  </header>
+  <main class="app">
+    <div class="timer">
+      <div class="button-group mode-buttons" id="js-mode-buttons">
+        <button
+          data-mode="study"
+          class="button active mode-button"
+          id="js-study"
+        >
+        STUDY
+        </button>
+        <button
+          data-mode="short_break"
+          class="button mode-button"
+          id="js-short-break"
+        >
+        SHORT BREAK
+        </button>
+        <button
+          data-mode="long_break"
+          class="button mode-button"
+          id="js-long-break"
+        >
+        LONG BREAK
+        </button>
+      </div>
+      <div class="clock" id="js-clock">
+        <span id="js-minutes">25</span>
+        <span class="separator">:</span>
+        <span id="js-seconds">00</span>
+      </div>
+      <button class="main-button" data-action="start" id="js-btn">
+        Start
+      </button>
+    </div>
+  </main>
 </body>
-
 </html>

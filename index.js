@@ -53,13 +53,6 @@ app.get("/timers", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/timers.html"))
 })
 
-const port = process.env.PORT || 8080;
 
-app.listen(port, () => {
-    console.log(`Running on port ${port}`);
-    console.log('press CTRL + C to quit');
-});
-
-
-// export default app;
+export default app;
 

@@ -6,7 +6,7 @@ const pass = encodeURIComponent("P@ssw0rd")
 const con_string = `mongodb+srv://admin:${pass}@agile.ja8u2.mongodb.net/tester?retryWrites=true&w=majority`;
 
 
-data_base.connect(con_string, function(err, db) {
+data_base.connect(con_string, (err, db) =>  {
 
     const acc = db.db().admin();
     acc.listDatabases(async function(err, result) {

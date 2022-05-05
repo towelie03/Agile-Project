@@ -17,6 +17,8 @@ app.use(bp.json());
 
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.static(path.join(__dirname, "templates")))
+
 app.get("/test", (req, res) => {
 	res.json({ msg: "This is a test for the mongo auth" });
 });
@@ -49,6 +51,13 @@ app.get("/timers", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/timers.html"))
 })
 
+const port = process.env.PORT || 8080;
 
-export default app;
+app.listen(port, () => {
+    console.log(`Running on port ${port}`);
+    console.log('press CTRL + C to quit');
+});
+
+
+// export default app;
 

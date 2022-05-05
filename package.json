@@ -23,12 +23,13 @@
   "homepage": "https://github.com/ligmanoots/Agile-Project#readme",
   "type": "module",
   "transform": {
-  "\\.[jt]sx?$": "babel-jest",
-  "\\.css$": "some-css-transformer"
+    "\\.[jt]sx?$": "babel-jest",
+    "\\.css$": "some-css-transformer"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
     "checkout": "^1.0.1",
+    "dotenv": "^16.0.0",
     "express": "^4.18.0",
     "jest": "^28.0.3",
     "lit": "^2.2.3",

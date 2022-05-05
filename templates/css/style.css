@@ -191,6 +191,10 @@ body {
     align-items: center;
     font-family: arial, sans-serif;
 }
+
+span {
+    font-size: 15rem;
+}
   
 .mode-button {
     font-size: 16px;

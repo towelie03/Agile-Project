@@ -6,25 +6,25 @@ function navs() {
     `   <nav>
   <ul class="nav_link_list">
   <li class="nav_link">
-  <a href="index.html" class="
+  <a href="index" class="
   nav_link_a
   link__hover-effect
   ">Home</a>
 </li>
 <li class="nav_link">
-<a href="about.html" class="
+<a href="about" class="
   nav_link_a
   link__hover-effect
   ">About</a>
 </li>
 <li class="nav_link">
-<a href="story.html" class="
+<a href="story" class="
   nav_link_a
   link__hover-effect
   ">Story</a>
 </li>
 <li class="nav_link">
-<a href="timers.html" class="
+<a href="timers" class="
   nav_link_a
   link__hover-effect
   ">Timer</a>
@@ -32,7 +32,7 @@ function navs() {
 
 
 <li class="nav_link">
-<a href="login.html" class="
+<a href="login" class="
   nav_link_a
   link__hover-effect
   "> Login/Signup</a>

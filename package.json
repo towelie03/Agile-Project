@@ -1,7 +1,8 @@
 {
   "name": "agile-project",
   "jest": {
-    "verbose": true
+    "verbose": true,
+    "collectCoverage": true
   },
   "version": "1.0.0",
   "description": "5 week sem agile project",

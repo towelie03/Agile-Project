@@ -11,7 +11,7 @@
   ">Home</a>
 </li>
 <li class="nav_link">
-<a href="about" class="
+<a href="about.html" class="
   nav_link_a
   link__hover-effect
   ">About</a>

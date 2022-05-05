@@ -14,7 +14,8 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="src/nav.js"></script>
+  <script defer src="src/nav.js" ></script>
+  <script defer src="src/script.js"></script>
   <title>login</title>
 </head>
 <div id="navbar"></div>
@@ -53,17 +54,6 @@
         password.type = "password";
       }
     };
-    function LDmode() {
-      const dark = document.querySelector(".login-page")
-      if (check == false) {
-        dark.classList.replace('light-theme', 'dark-theme')
-        check = true
-      } else if (check == true) {
-        dark.classList.replace('dark-theme', 'light-theme')
-        check = false
-      }
-    }
-
   </script>
 </body>
 

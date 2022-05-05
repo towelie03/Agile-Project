@@ -11,7 +11,8 @@
     href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="src/nav.js" defer></script>
+  <script defer src="src/nav.js" ></script>
+  <script defer src="src/script.js"></script>
   <title>Story</title>
 </head>
 <header>
@@ -67,15 +68,5 @@
 </body>
 <script>
   var check = false
-  function LDmode() {
-    const dark = document.querySelector(".login-page")
-    if (check == false) {
-      dark.classList.replace('light-theme', 'dark-theme')
-      check = true
-    } else if (check == true) {
-      dark.classList.replace('dark-theme', 'light-theme')
-      check = false
-    }
-  }
 </script>
 </div>

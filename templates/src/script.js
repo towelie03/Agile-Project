@@ -1,7 +1,7 @@
 var check = false
 
 function LDmode() {
-    const dark = document.querySelector(".main-container")
+    const dark = document.querySelector(".login-page")
     if (check == false) {
         dark.classList.replace('light-theme', 'dark-theme')
         check = true

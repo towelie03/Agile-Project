@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import mongo from 'mongodb';
 import bp from 'body-parser';
 import path from 'path';
+import userModel from './models/user.model.js';
 //import db from './config/db.js';
 
 const app = express();
@@ -39,6 +40,10 @@ app.get("/login", (req, res) => {
 app.get("/signup", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/signup.html"));
 });
+app.post("/signup", function(req, res){
+	let newUser = new userModel(req.body)
+	newUser.save()
+})
 
 app.get("/timers", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/timers.html"))

@@ -14,7 +14,7 @@ const con_string = `mongodb+srv://admin:${pass}@agile.ja8u2.mongodb.net/tester?r
    console.log("Connected to MongoDB database.")
 })*/
 
-const { MongoClient } = require("mongodb");
+import { MongoClient } from "mongodb";
 const cred = [ {'admin': 'pwd'}]
 
 
@@ -33,3 +33,5 @@ const client = new MongoClient(con_string);
   }
 }
 run().catch(console.dir)*/
+
+export default db;

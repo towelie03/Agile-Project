@@ -47,6 +47,8 @@ app.post("/signup", function(req, res){
 	newUser.save()
 })
 
+app.use(express.static(__dirname + "/templates"))
+
 app.get("/timers", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/timers.html"))
 })

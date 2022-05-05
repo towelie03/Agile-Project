@@ -4,7 +4,6 @@ import mongo from 'mongodb';
 import bp from 'body-parser';
 import path from 'path';
 import userModel from './models/user.model.js';
-//import db from './config/db.js';
 
 const app = express();
 
@@ -46,7 +45,6 @@ app.post("/signup", function(req, res){
 	let newUser = new userModel(req.body)
 	newUser.save()
 })
-
 
 
 app.get("/timers", (req, res) => {

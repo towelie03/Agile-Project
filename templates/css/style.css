@@ -22,26 +22,28 @@
     box-sizing: border-box;
 }
 
-.btn:hover {
-    color: #dddddd;
+
+/* Darkmode */
+
+.dark-mode-toggle {
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+    color: var(--foreground);
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
 }
 
 
-.nav_link:hover {
-    text-decoration: none;
-}
 
+/* Darkmode */
 
-.btn {
-    border: none;
-    color: var(--not-white);
-    background-color: var(--not-grey);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.3em;
-}
 
 .nav_right_a {
     display: flex;

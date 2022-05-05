@@ -6,7 +6,7 @@ function navs() {
     `   <nav>
   <ul class="nav_link_list">
   <li class="nav_link">
-  <a href="index" class="
+  <a href="/" class="
   nav_link_a
   link__hover-effect
   ">Home</a>

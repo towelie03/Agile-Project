@@ -4,7 +4,24 @@ const pass = encodeURIComponent("P@ssw0rd")
 
 const con_string = `mongodb+srv://admin:${pass}@agile.ja8u2.mongodb.net/tester?retryWrites=true&w=majority`;
 
-// const client = mongoose.connect(con_string, {useNewUrlParser: true})
+const MongoClient = require('mongodb').MongoClient;
+
+MongoClient.connect(con_string, function(err, db) {
+
+    const acc = db.db().admin();
+    acc.listDatabases(async function(err, result) {
+    try{    
+        console.log(result.databases);
+        db.close();
+    }
+    catch (err){
+        console.error(err)
+    }
+    });
+  });
+
+
+// const MongoClient = mongoose.connect(con_string, {useNewUrlParser: true})
 
 // mongoose.connection.on("error", function(error) {
 //   console.log(error)
@@ -14,22 +31,71 @@ const con_string = `mongodb+srv://admin:${pass}@agile.ja8u2.mongodb.net/tester?r
 //   console.log("Connected to MongoDB database.")
 // })
 
-const { MongoClient } = require("mongodb");
-const cred = [ {'admin': 'pwd'}]
+// async function listDatabases(client){
+//     databasesList = await client.db().admin().listDatabases();
+ 
+//     console.log("Databases:");
+//     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+// };
+
+//     async function main(){
+
+    // const pass = encodeURIComponent("P@ssw0rd")
+
+    // const con_string = `mongodb+srv://admin:${pass}@agile.ja8u2.mongodb.net/tester?retryWrites=true&w=majority`;
+//     const { MongoClient } = require("mongodb");
+//     const client = new MongoClient(con_string)
+
+//     try {
+//         // Connect to the MongoDB cluster
+//         await client.connect();
+
+//         // Make the appropriate DB calls
+//         await  listDatabases(client);
+
+//     } catch (e) {
+//         console.error(e);
+//     } finally {
+//         await client.close();
+//     }
 
 
-const client = new MongoClient(con_string);
-async function run() {
-  try {
-    await client.connect();
-    const database = client.db("tester");
-    const test = database.test;
-    // create a document to insert
-    await test.insertOne(cred);
-        console.log(`A document was inserted with the _id: ${new_cred.insertedId}`)
-;
-  } finally {
-    await client.close();
-  }
-}
-run().catch(console.dir)
+//     main().catch(console.error);
+// }
+
+
+// const mongoose = require('mongoose')
+
+// const connectionParams={
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true 
+// }
+// let client = mongoose.connect(con_string,connectionParams)
+//     .then( () => {
+//         console.log('Connected to database ')
+//     })
+//     .catch( (err) => {
+//         console.error(`Error connecting to the database. \n${err}`);
+//     })
+
+
+// test.insert([{  name: 'bob',
+//     email: 'bob@bob.com',
+//     username :'admin',
+//     password : 'pwd',
+//  }, 
+// {   name: 'john',
+//     email: 'john@john.com',
+//     username:'root', 
+//     password: 'p@ssword' 
+// }, 
+// {   name: 'jamal',
+//     email: 'jamal@jamal.com',
+//     username:'sam',
+//     password: 'abc' 
+// }, 
+// {   name: 'steve',
+//     email: 'steve@steve.com',
+//     username:'bob',
+//     password: 'xyz' 
+// }])

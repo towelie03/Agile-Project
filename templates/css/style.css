@@ -161,13 +161,13 @@ html {
 }
   
 :root {
-    --study: hsl(223, 25%, 40%);
-    --short_break: hsl(48, 23%, 40%);
-    --long_break: hsl(105, 16%, 40%);
+    --study: hsl(0, 90%, 72%);
+    --short_break: hsl(48, 67%, 49%);
+    --long_break: hsl(105, 77%, 66%);
 }
   
 body {
-    background-color: var(--pomodoro);
+    background-color: var(--study);
     transition: background-color 1s ease;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     user-select: none;
@@ -185,42 +185,44 @@ body {
 .clock {
     margin-top: 50px;
     margin-bottom: 30px;
-    font-size: 15rem;
+    font-size: 16rem;
     line-height: 1;
     display: flex;
     align-items: center;
-    font-family: arial, sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 span {
-    font-size: 15rem;
+    font-size: 16rem;
 }
   
 .mode-button {
-    font-size: 16px;
-    height: 28px;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    height: 30px;
     cursor: pointer;
     box-shadow: none;
     font-weight: 300;
-    color: #fff;
-    border: 1px solid transparent;
+    color: black;
+    border: 2px solid transparent;
     margin: 0px;
-    border-radius: 4px;
+    border-radius: 5px;
     padding: 2px 12px;
     background: none;
 }
   
 .mode-button.active {
-    border-color: #fff;
+    border-color: black;
 }
   
 .main-button {
     cursor: pointer;
+    font-family: 'Rubik', sans-serif;
     box-shadow: rgb(235, 235, 235) 0px 6px 0px;
-    font-size: 22px;
+    font-size: 27px;
     height: 55px;
     text-transform: uppercase;
-    color: hsl(175, 26%, 41%);
+    color: black;
     font-weight: bold;
     width: 200px;
     background-color: white;

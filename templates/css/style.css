@@ -1,11 +1,71 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
+:root {
+    --not-white: #fafafa;
+    --not-black: #191724;
+    --not-grey: #1e1e1e;
+    --hdr-hght: 5rem;
+    --lrg-txt: 2.2rem;
 }
 
-/* TITLE ON MAIN PAGE */
+.light-theme {
+    background-color: var(--not-white);
+    color: var(--not-black);
+}
+
+/* .dark-theme {
+    background-color: var(black);
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    color: #dddddd;
+}
+
+
+.nav_link:hover {
+    text-decoration: none;
+}
+
+
+.btn {
+    border: none;
+    color: var(--not-white);
+    background-color: var(--not-grey);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3em;
+}
+
+.nav_right_a {
+    display: flex;
+
+}
+
+.nav_right {
+    display: flex;
+
+}
+
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--bg-color);
+}
 
 .title h1 {
     font-family: 'Playfair Display', serif;
@@ -21,19 +81,20 @@
     width: 100%;
     max-width: 300px;
     margin: 15px auto 0;
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     text-align: center;
     font-weight: 400;
     line-height: 1.5;
 }
 
+/* 
 .app {}
 
 .container {}
 
 .header-logo {}
-
+ */
 
 
 
@@ -44,7 +105,7 @@ nav {
     height: auto;
     width: 100%;
     margin: 0 auto;
-    background-color: #171a1b;
+    background-color: #dddddd;
     font-family: "Aresenal", sans-serif;
     position: sticky;
     top: 0px;
@@ -227,3 +288,33 @@ a:hover {
 a:link {
     color: #171a1b;
 }   */
+
+
+.light-theme {
+    background-color: var(--not-white);
+    color: var(--not-black);
+}
+
+.dark-theme {
+    background-color: var(--not-grey);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+.login-page {
+    height: 100vh;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--bg-color);
+}

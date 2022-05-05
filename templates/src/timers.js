@@ -24,8 +24,8 @@ function get_remaining_time(endtime) {
     const current_time = Date.parse(new Date());
     const time_diff = endtime - current_time
 
-    const total = Number.parseInt(time_diff/1000, 10);
-    const minutes = Number.parseInt((total/60) % 60, 10);
+    const total = Number.parseInt(time_diff / 1000, 10);
+    const minutes = Number.parseInt((total / 60) % 60, 10);
     const seconds = Number.parseInt(total % 60, 10);
 
     return {
@@ -37,13 +37,13 @@ function get_remaining_time(endtime) {
 
 function start_timer() {
     let { total } = timer.remaining_time;
-    const end_time = Date.parse(new Date()) + total*1000;
+    const end_time = Date.parse(new Date()) + total * 1000;
 
     main_button.dataset.action = 'stop';
     main_button.textContent = 'stop';
     main_button.classList.add('active');
 
-    interval = setInterval(function() {
+    interval = setInterval(function () {
         timer.remaining_time = get_remaining_time(end_time);
         updater()
 
@@ -77,7 +77,7 @@ function updater() {
 function switcher(mode) {
     timer.mode = mode;
     timer.remaining_time = {
-        total: timer[mode]*60,
+        total: timer[mode] * 60,
         minutes: timer[mode],
         seconds: 0,
     };

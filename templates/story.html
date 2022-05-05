@@ -11,55 +11,20 @@
     href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
-  <script defer src="./src/nav.js"></script>
+  <script src="src/nav.js" defer></script>
   <title>Story</title>
 </head>
 
 <body>
-  <div id="navbar">
-  </div> 
-  <!-- <nav>
-    <ul class="nav_link_list">
-      <li class="nav_link">
-        <a href="index.html" class="
-            nav_link_a
-            link__hover-effect
-            ">Home</a>
-      </li>
-      <li class="nav_link">
-        <a href="about.html" class="
-            nav_link_a
-            link__hover-effect
-            ">About</a>
-      </li>
-      <li class="nav_link">
-        <a href="story.html" class="
-            nav_link_a
-            link__hover-effect
-            ">Story</a>
-      </li>
-      <li class="nav_link">
-        <a href="timers.html" class="
-            nav_link_a
-            link__hover-effect
-            ">Timer</a>
-      </li>
-      <li class="nav_link">
-        <a href="login.html" class="
-            nav_link_a
-            link__hover-effect
-            "> Login/Signup</a>
-      </li>
-
-  </nav> -->
   <header>
     <h1><span class="BCIT">TO BE</span>STYLED</h1>
   </header>
   </div>
+  <button onclick="LDmode()">Toggle dark mode</button>
+<div class="login-page light-theme">
   <div class="calendar">
     <div id="cal-head">
-      <button id="prev-month">
-        <<< /button>
+      <button id="prev-month"><<</button>
           <select id="month">
             <option value="jan">JANUARY</option>
             <option value="feb">FEBRUARY</option>
@@ -96,5 +61,18 @@
       </table>
     </div>
   </div>
-
 </body>
+<script>
+  var check = false
+  function LDmode() {
+    const dark = document.querySelector(".login-page")
+    if (check == false) {
+      dark.classList.replace('light-theme', 'dark-theme')
+      check = true
+    } else if (check == true) {
+      dark.classList.replace('dark-theme', 'light-theme')
+      check = false
+    }
+  }
+</script>
+</div>

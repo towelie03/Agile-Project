@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import mongo from 'mongodb';
 import bp from 'body-parser';
 import path from 'path';
-import userModel from './models/user.model.js';
+import userModel from './models/userModel.js';
 
 const app = express();
 

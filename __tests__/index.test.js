@@ -46,3 +46,6 @@ describe("get endpoints for /timers", () => {
 		expect(res.status).toBe(200)
 	})	
 })
+
+
+

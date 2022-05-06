@@ -18,9 +18,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "templates")))
 
-app.get("/test", (req, res) => {
-	res.json({ msg: "This is a test for the mongo auth" });
-});
 
 app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/index.html"));
@@ -41,9 +38,11 @@ app.get("/login", (req, res) => {
 app.get("/signup", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/signup.html"));
 });
-app.post("/signup", function(req, res){
-	let newUser = new userModel(req.body)
-	newUser.save()
+app.post("/signup", async (req, res) => {
+	const { username, password  } = req.body
+	const user = new User({username, password})
+	const ret = await user.save()
+	res.json(ret)
 })
 
 

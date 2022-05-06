@@ -1,22 +1,30 @@
-import data_base from '../config/db.js';
-import supertest from 'supertest';
-import app from '../index.js';
 import mongoose from 'mongoose';
 import { MongoClient } from 'mongodb';
+import { MongoMemoryServer } from 'mongodb-memory-server';
+import userModel from '../models/userModel.js';
 
-describe("test database connection", () => {
-	it('testing connection', function done() {
-		mongoose.connection.once("open", () => console.log('DB Connected')).on('error', (err) => {
-			console.warn('Error: ', err)
-		});
+let connection = MongoClient;
+let mongoServer = MongoMemoryServer;
 
-		beforeEach(function done() {
-			mongoose.connection.collections.test.drop(() => {
-				done();
-			})
-		});
-	done();		
-	});
+
+
+describe("testing mongodb", () =>{
+    describe("checks connection to database", () => {
+        it("connects to database succesfully", (done) => {
+            mongoose.connection
+                .once("open", () => console.log("Connected"))
+                .on("error", (err) => {
+                    console.warn("Error: ", err)
+                });
+
+                beforeEach((done) => {
+                    mongoose.connection.collections.tester.drop(() => {
+                        done();
+                    });
+                });
+        done();
+        });
+    });
 });
 
 

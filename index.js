@@ -1,9 +1,6 @@
 import express from 'express';
-import mongoose from 'mongoose';
-import mongo from 'mongodb';
 import bp from 'body-parser';
 import path from 'path';
-import userModel from './models/userModel.js';
 
 const app = express();
 
@@ -38,12 +35,7 @@ app.get("/login", (req, res) => {
 app.get("/signup", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/signup.html"));
 });
-app.post("/signup", async (req, res) => {
-	const { username, password  } = req.body
-	const user = new User({username, password})
-	const ret = await user.save()
-	res.json(ret)
-})
+
 
 
 app.get("/timers", (req, res) => {

@@ -38,6 +38,7 @@ describe("get endpoints for /signup", () => {
 		const res = await request.get('/signup')
 		expect(res.status).toBe(200)
 	})
+})
 
 describe("get endpoints for /timers", () => {
 	it('ends GET request the /timers endpoint', async () => {

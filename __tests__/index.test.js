@@ -37,5 +37,11 @@ describe("get endpoints for /signup", () => {
 	it('ends GET request the /signup endpoint', async () => {
 		const res = await request.get('/signup')
 		expect(res.status).toBe(200)
+	})
+
+describe("get endpoints for /timers", () => {
+	it('ends GET request the /timers endpoint', async () => {
+		const res = await request.get('/timers')
+		expect(res.status).toBe(200)
 	})	
 })

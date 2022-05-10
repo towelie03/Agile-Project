@@ -1,18 +1,15 @@
 import mongoose from "mongoose";
 import app from '../index.js'
-import dotenv from 'dotenv';
+import { config } from "dotenv";
+config({ path: process.ENV })
 import User from '../models/userModel.js';
-dotenv.config()
 
-mongoose.Promise = global.Promise
-const MONGODB_URI = process.env.uri
-mongoose.connect(MONGODB_URI);
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri,
+	{
+		useNewUrlParser:true
+	}).then(() => console.log("Connected to DB Successfully")
+	).catch(err => console.log(err));	
 
-app.post("/signup", async (req, res) => {
-	const { username, password  } = req.body
-	const user = new User({username, password})
-	const ret = await user.save()
-	res.json(ret)
-})
 
 

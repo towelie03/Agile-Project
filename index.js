@@ -39,5 +39,5 @@ app.get("/timers", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/timers.html"))
 })
 
-export default app;
+export default app; router;
 

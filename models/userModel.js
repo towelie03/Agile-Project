@@ -12,11 +12,11 @@ const User = mongoose.model('User', new mongoose.Schema({
     }
   }));
 
-function validateUser(user) {
+function validate(user) {
     const schema = {
-        name: Joi.string().min(5).max(15).required()
+        username: Joi.string().min(5).max(15).required()
     };
     return Joi.validate(user, schema);
 }
-export default User; validateUser;
+export default User; validate;
 

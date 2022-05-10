@@ -1,15 +1,36 @@
 import mongoose from "mongoose";
-import app from '../index.js'
+import router from '..index.js';
 import { config } from "dotenv";
 config({ path: process.ENV })
-import User from '../models/userModel.js';
+import { User, validate } from '../models/userModel.js';
 
-const uri = process.env.ATLAS_URI;
+const uri = process.env.atlas_uri;
 mongoose.connect(uri,
 	{
-		useNewUrlParser:true
-	}).then(() => console.log("Connected to DB Successfully")
-	).catch(err => console.log(err));	
+		usenewurlparser:true
+	}).then(() => console.log("connected to db successfully")
+	).catch(err => console.log(err));
+
+//vaildates the request
+router.post('/signup', async (req, res) => {
+	const { error } = validate(req.body);
+	if (error) {
+		return res.status(400).send(error.details[0].message);
+	}
+
+	//check if the user already exists
+	let user = await user.findone({ username: req.body.email });
+	if (user) {
+		return res.status(400).send('the user already exists');
+	} else {
+		//insert new user into db if they dont exist
+		user = new user({
+			username: req.body.username
+		});
+		await user.save();
+        res.send(user);
+	}
+});
 
 
 

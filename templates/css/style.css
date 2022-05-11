@@ -166,7 +166,7 @@ html {
     --long_break: hsl(105, 77%, 66%);
 }
   
-body {
+.timer_body {
     background-color: var(--study);
     transition: background-color 1s ease;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -420,11 +420,4 @@ a:link {
     height: 100vh;
     display: flex;
     font-family: 'Quicksand', sans-serif;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    background-color: var(--bg-color);
 }

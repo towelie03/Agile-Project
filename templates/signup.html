@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,15 +15,15 @@
   <script defer src="src/nav.js"></script>
   <script defer src="src/app.js"></script>
   <script defer src="src/script.js"></script>
-  <title>signup</title>
+  <title>Signup</title>
 </head>
-
-<button onclick="LDmode()">Toggle dark mode</button>
-
 <body>
-
+  <header>
+    <div id="navbar">
+    </div>
+  </header>
   <div class="login-page light-theme">
-    <div class="form" method="post" action="/signup>
+    <div class="form" method="post" action="/signup">
       <form>
       <input type="text" placeholder="username" required />
       <input type="password" id="password" placeholder="password" required />
@@ -32,7 +31,6 @@
       <br>
       <br>
       </form>
-
       <form class="login-form">
         <button type="button" onclick="window.location.href='login.html'">
           SIGN UP
@@ -40,20 +38,19 @@
       </form>
     </div>
   </div>
-</body>
-<script>
-  var check = false
-  function show() {
-    var password = document.getElementById("password");
-    var icon = document.querySelector(".fas");
-
-    // ========== Checking type of password ===========
-    if (password.type === "password") {
-      password.type = "text";
-    } else {
-      password.type = "password";
+  <script>
+    var check = false
+    function show() {
+      var password = document.getElementById("password");
+      var icon = document.querySelector(".fas");
+  
+      // ========== Checking type of password ===========
+      if (password.type === "password") {
+        password.type = "text";
+      } else {
+        password.type = "password";
+      }
     }
-  }
-  var check = false
-</script>
+    var check = false
+  </script>
 </body>

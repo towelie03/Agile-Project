@@ -29,13 +29,17 @@ function navs() {
   link__hover-effect
   ">Timer</a>
 </li>
-
-
 <li class="nav_link">
 <a href="login" class="
   nav_link_a
   link__hover-effect
-  "> Login/Signup</a>
+  ">Login/Signup</a>
+</li>
+<li class="nav_link">
+<a href="custom" class="
+  nav_link_a
+  link__hover-effect
+  ">Custom</a>
 </li>
 
 

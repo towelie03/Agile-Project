@@ -39,5 +39,9 @@ app.get("/timers", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/timers.html"))
 })
 
+app.get("/custom", (req, res) => {
+	res.sendFile(path.join(__dirname + "/templates/custom.html"))
+})
+
 export default app;
 

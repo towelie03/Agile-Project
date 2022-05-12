@@ -16,6 +16,7 @@
   <script defer src="src/nav.js"></script>
   <script defer src="src/app.js"></script>
   <script defer src="src/script.js"></script>
+  <script defer src="../config/db.js"></script>
   <title>signup</title>
 </head>
 
@@ -24,17 +25,16 @@
 <body>
 
   <div class="login-page light-theme">
-    <div class="form" method="post" action="/signup>
-      <form>
-      <input type="text" placeholder="username" required />
-      <input type="password" id="password" placeholder="password" required />
+    <div class="form" method="post" action="/signup>"
+      <form action="Add User to DB" method="post">
+      <input type="username" id="username" placeholder="Username" required />
       <i class="fas fa-eye" onclick="show()"></i>
       <br>
       <br>
       </form>
 
       <form class="login-form">
-        <button type="button" onclick="window.location.href='login.html'">
+        <button type="button" onclick= insertDB()>
           SIGN UP
         </button>
       </form>

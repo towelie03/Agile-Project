@@ -1,6 +1,9 @@
 import express from 'express';
 import bp from 'body-parser';
 import path from 'path';
+import {userModel} from './models/userModel.js'
+import client from './config/db.js';
+import insertDB from './config/db.js';
 
 
 const app = express();
@@ -16,25 +19,43 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "templates")))
 
-app.get("/", (req, res) => {
+router
+.route("/")
+.get((req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/index.html"));
-});
+})
 
-app.get("/about", (req, res) => {
+router
+.route("/about")
+.get((req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/about.html"));
-});
+})
 
-app.get("/story", (req, res) => {
+router
+.route("/story")
+.get((req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/story.html"));
-});
+})
 
-app.get("/login", (req, res) => {
+router
+.route("/login")
+.get((req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/login.html"));
-});
+})
 
-app.get("/signup", (req, res) => {
+router
+.route("/signup")
+.get((req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/signup.html"));
-});
+})
+
+.post((req, res) => {
+	const User = new userModel(req.username)
+	User.save()
+	insertDB(User)
+	res.redirect("/login")
+
+})
 
 app.get("/timers", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/timers.html"))

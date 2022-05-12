@@ -1,9 +1,16 @@
-const timer = {
+var timer = {
     study: 25,
     short_break: 5,
     long_break: 15,
     lb_interval: 3,
 }
+
+const custom = document.getElementById('custom-btn')
+custom.addEventListener('click', () => {
+    timer['study'] = document.getElementById('study').value
+    timer['short_break'] = document.getElementById('short-break').value
+    timer['long_break'] = document.getElementById('long-break').value
+})
 
 let interval;
 

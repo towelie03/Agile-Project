@@ -455,6 +455,7 @@ a:link {
     font-family: 'Quicksand', sans-serif;
 }
 
+
 /* calendar stuff */
 button {
     border: none;
@@ -533,4 +534,17 @@ td {
 #year {
     background-color: #FAFAFA;
     font-size: 30px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row-column;
+    flex-grow: 1;
+    background-color: var(--bg-color);
+}
+
+.popup-container {
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }

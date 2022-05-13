@@ -428,3 +428,9 @@ a:link {
     flex-grow: 1;
     background-color: var(--bg-color);
 }
+
+.popup-container {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}

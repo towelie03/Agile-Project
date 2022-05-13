@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 
 const userModel = new Schema({
-    username: { 
+    uname: { 
       type: String, 
       required: true,
       minlength: 5,

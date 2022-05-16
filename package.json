@@ -1,0 +1,46 @@
+{
+  "name": "agile-project",
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true
+  },
+  "version": "1.0.0",
+  "description": "5 week sem agile project",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ligmanoots/Agile-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ligmanoots/Agile-Project/issues"
+  },
+  "homepage": "https://github.com/ligmanoots/Agile-Project#readme",
+  "type": "module",
+  "transform": {
+    "\\.[jt]sx?$": "babel-jest",
+    "\\.css$": "some-css-transformer"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "checkout": "^1.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.1",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^2.2.2",
+    "jest": "^28.0.3",
+    "mongodb-memory-server": "^8.5.2",
+    "supertest": "^6.2.3"
+  }
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,51 +10,68 @@
     href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="src/nav.js" ></script>
   <script defer src="src/script.js"></script>
+  <script defer src="src/nav.js" ></script>
+  <script defer src="src/app.js"></script>
   <title>Story</title>
 </head>
 <body>
-  <div id="navbar"></div>
+  <header>
+    <div id="navbar"></div>
   </div>
-  <!-- <button onclick="LDmode()">Toggle dark mode</button> -->
-<div class="login-page light-theme">
-  <div class="calendar">
-    <div id="cal-head">
-      <button id="prev-month"></button>
-          <select id="month">
-            <option value="jan">JANUARY</option>
-            <option value="feb">FEBRUARY</option>
-            <option value="mar">MARCH</option>
-            <option value="apr">APRIL</option>
-            <option value="may">MAY</option>
-            <option value="june">JUNE</option>
-            <option value="july">JULY</option>
-            <option value="aug">AUGUST</option>
-            <option value="sept">SEPTEMBER</option>
-            <option value="oct">OCTOBER</option>
-            <option value="nov">NOVEMBER</option>
-            <option value="dec">DECEMBER</option>
-          </select>
-          <input type="number" id="year" placeholder="YEAR" min="0" max="">
-          <button id="next-month">>></button>
-    </div>
-    <div id="cal-body">
-      <table>
-        <thead>
-          <tr class="days">
-            <td id="sun">S</td>
-            <td id="mon">M</td>
-            <td id="tues">Tu</td>
-            <td id="wed">W</td>
-            <td id="thur">Th</td>
-            <td id="fri">F</td>
-            <td id="sat">Sa</td>
-          </tr>
-        </thead>
-        <tbody id="cal-days">
-        </tbody>
-      </table>
+  </header>
+  <div class="login-page light-theme">
+    <div class="calendar">
+      <div id="cal-head">
+        <button id="prev-month"><<</button>
+        <select id="month">
+          <option value="jan">JANUARY</option>
+          <option value="feb">FEBRUARY</option>
+          <option value="mar">MARCH</option>
+          <option value="apr">APRIL</option>
+          <option value="may">MAY</option>
+          <option value="june">JUNE</option>
+          <option value="july">JULY</option>
+          <option value="aug">AUGUST</option>
+          <option value="sept">SEPTEMBER</option>
+          <option value="oct">OCTOBER</option>
+          <option value="nov">NOVEMBER</option>
+          <option value="dec">DECEMBER</option>
+        </select>
+        <input type="number" id="year" placeholder="YEAR" min="0" max="">
+        <button id="next-month">>></button>
+      </div>
+      <div id="cal-body">
+        <table>
+          <thead>
+            <tr class="days">
+              <td id="sun">S</td>
+              <td id="mon">M</td>
+              <td id="tues">Tu</td>
+              <td id="wed">W</td>
+              <td id="thur">Th</td>
+              <td id="fri">F</td>
+              <td id="sat">Sa</td>
+            </tr>
+          </thead>
+          <tbody id="cal-days">
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
+
+    <div class="popup-container">
+    <h4></h4>
+    <form id="form-popup" action="#">
+      <select id="timer-options">
+        <option value="study">25 mins</option>
+        <option value="short-break">5 mins</option>
+        <option value="long-break">15 mins</option>
+      </select>
+      <button id="btn-save">Save</button>
+      <button id="btn-cancel">cancel</button>
+    </form>
+  </div>
+</div>
 </body>

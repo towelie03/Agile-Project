@@ -10,13 +10,21 @@ const day_list = document.querySelector(".days").children;
 const prev_month = document.querySelector("#prev-month");
 const next_month = document.querySelector("#next-month");
 
+const form_div = document.querySelector(".popup-container");
+
+const cancel_btn = document.querySelector("#btn-cancel");
+const save_btn = document.querySelector("#btn-save");
+
 // Default (today's date)
 const date = new Date();
 const [year, month, day] = [date.getFullYear(), date.getMonth(), date.getDate()];
 
-month_selector.value = month_label[month].value;
-year_input.value = year;
-updateCalendar();
+function init() {
+    month_selector.value = month_label[month].value;
+    year_input.value = year;
+    updateCalendar();
+    formVisibility(false);
+}
 
 // Event Listeners
 year_input.addEventListener('input', updateCalendar);
@@ -57,6 +65,12 @@ function updateCalendar() {
 
         const td = document.createElement("td");
         td.innerText = i;
+        td.addEventListener('click', (e) => { dateClicked(e) });
+
+        if (month_index == month && year_input.value == year && day == i) {
+            td.style.backgroundColor = "grey";
+        }
+
         tr.appendChild(td);
         day_index++;
     }
@@ -85,6 +99,29 @@ function updateMonth(specification) {
     updateCalendar();
 }
 
+
+function dateClicked(e) {
+    const cur_day = e.target.firstChild.data;
+    const cur_date = `${month_selector.value} ${cur_day}, ${year_input.value}`;
+    form_div.firstChild.textContent = cur_date.toUpperCase();
+    
+    formVisibility(true);
+
+    cancel_btn.onclick = function() {
+        formVisibility(false);
+    }
+
+    save_btn.onclick = function() {
+        e.target.innerHTML = cur_day + "<br>" + document.getElementById("timer-options").value;
+        formVisibility(false);
+    }
+}
+
+function formVisibility(bool) {
+    bool ? form_div.style.display = "block" : form_div.style.display = "none";
+}
+
+
 var check = false
 
 function LDmode() {
@@ -96,4 +133,6 @@ function LDmode() {
         dark.classList.replace('dark-theme', 'light-theme')
         check = false
     }
-  }
+}
+
+init();

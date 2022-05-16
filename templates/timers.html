@@ -17,7 +17,7 @@
     <script defer src="src/nav.js" ></script>
     <title>Timers</title>
 </head>
-<body>
+<body class="timer_body">
   <header>
     <div id="navbar">
     </div>
@@ -54,6 +54,19 @@
       </div>
       <button class="main-button" data-action="start" id="js-btn">
         Start
+      </button>
+    </div>
+    <div class="customization">
+      <h1 class="custom-title">
+        CUSTOMIZE THE TIMERS
+      </h1>
+      <form id="ctm-form">
+        <input type="text" id="study" placeholder="Study Timer">
+        <input type="text" id="short-break" placeholder="Short Break">
+        <input type="text" id="long-break" placeholder="Long Break">
+      </form>
+      <button class ="main-button" id="custom-btn">
+        Custom
       </button>
     </div>
   </main>

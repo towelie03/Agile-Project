@@ -1,9 +1,58 @@
-const timer = {
+var timer = {
     study: 25,
     short_break: 5,
     long_break: 15,
     lb_interval: 3,
 }
+
+const custom = document.getElementById('custom-btn');
+custom.addEventListener('click', () => {
+    const ctm_study = document.getElementById('study')
+    const ctm_short_break = document.getElementById('short-break')
+    const ctm_long_break = document.getElementById('long-break')
+
+    if (ctm_study.value > 60) {
+        timer['study'] = 60
+    } else {
+        timer['study'] = ctm_study.value
+    }
+
+    if (ctm_short_break.value > 60) {
+        timer['short_break'] = 60
+    } else {
+        timer['short_break'] = ctm_short_break.value
+    }
+
+    if (ctm_long_break.value > 60) {
+        timer['long_break'] = 60
+    } else {
+        timer['long_break'] = ctm_long_break.value
+    }
+
+    if (ctm_study.value < 1) {
+        timer['study'] = 1
+    } else {
+        timer['study'] = ctm_study.value
+    }
+
+    if (ctm_short_break.value < 1) {
+        timer['short_break'] = 1
+    } else {
+        timer['short_break'] = ctm_short_break.value
+    }
+
+    if (ctm_long_break.value < 1) {
+        timer['long_break'] = 1
+    } else {
+        timer['long_break'] = ctm_long_break.value
+    }
+
+    switcher('study');
+
+    ctm_study.value = '';
+    ctm_short_break.value = '';
+    ctm_long_break.value = '';
+});
 
 let interval;
 

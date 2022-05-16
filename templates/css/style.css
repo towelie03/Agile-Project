@@ -64,7 +64,6 @@
 
 }
 
-
 .main-container {
     height: 100vh;
     display: flex;
@@ -99,10 +98,12 @@
     line-height: 1.5;
 }
 
-/* 
-.app {}
 
-.container {}
+/* .app {
+
+}
+
+ .container {}
 
 .header-logo {}
  */
@@ -166,7 +167,7 @@ html {
     --long_break: hsl(105, 77%, 66%);
 }
   
-body {
+.timer_body {
     background-color: var(--study);
     transition: background-color 1s ease;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -176,7 +177,7 @@ body {
 .timer {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 35%;
     transform: translate(-50%, -50%);
     padding: 20px;
     text-align: center;
@@ -252,6 +253,38 @@ button:focus, button:active {
     .clock {
       font-size: 8rem;
     }
+}
+
+/* CUSTOM MENU */
+
+.customization {
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.custom-title {
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    height: 30px;
+    font-weight: 300;
+    color: black;
+    margin: 0px;
+    padding: 50px;
 }
 
 /* REFERENCE CODE FOR FUTURE POTENTIAL USE */
@@ -422,9 +455,96 @@ a:link {
     font-family: 'Quicksand', sans-serif;
 }
 
+
+/* calendar stuff */
+button {
+    border: none;
+    background-color: #FAFAFA;
+    font-size: 15px;
+}
+
+select {
+    appearance: none;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    text-align: center;
+    background-color: #FAFAFA;
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+input {
+    border: none;
+    background: #FAFAFA;
+    appearance: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+option {
+    background: #f4f4f4;
+    font-size: 20px;
+}
+
+.calendar {
+    padding: 10px;
+}
+
+#cal-head, #cal-body {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #f4f4f4;
+    padding: 10px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f7f7f7;
+    width: 100%;
+    text-align: center;
+}
+
+tbody {
+    height: 250px;
+    text-align: start;
+    vertical-align: top;
+}
+
+td {
+    border: 2px dotted #f2f2f2;
+    font-size: 20px;
+}
+
+.days {
+    font-size: 30px;
+}
+
+#year {
+    background-color: #FAFAFA;
+    font-size: 30px;
+}
+
 .main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-column;
     flex-grow: 1;
     background-color: var(--bg-color);
+}
+
+.popup-container {
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }

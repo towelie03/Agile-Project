@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
-    rel="stylesheet">
-  <script defer src="src/script.js"></script>
-  <script defer src="src/nav.js"></script>
-  <link rel="stylesheet" href="css/style.css">
-  <title>About</title>
-</head>
-<body>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="src/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/page.css"> 
+    <script defer src="src/nav.js"></script>
+    <script defer src="src/timers.js"></script>
+    <title>index</title>
+  </head>
   <header>
     <div id="navbar">
     </div>
   </header>
-  <div class="login-page light-theme">
-    <h1>
-      Hello World
-    </h1>
-  </div>
-</body>
+  <body>
+    <!-- section is for seperating the pages -->
+    <section class="home-hero">
+      <div class="hero-bg">
+        <div class="hero-pattern-bg">
+          <img class="hero-pattern-img__default" src="img/hero-pattern-bg.png">
+          <img class="hero-pattern-img__large" src="img/hero-pattern-bg-lg.png">
+        </div>
+      </div>
+      <div class="hero-overlay">
+        <div class="hero-section">
+          <div class="hero-container">
+            <div class="hero-text">
+              <h1>Pomodoro Story</h1>
+              <p>Team: Erica, Ayman, Tristan, Daryush, Benny, Andrew</p>
+            </div>
+          </div>
+        </div>
+    </section>
+    </div>
+    <main class="app">
+      <div class="timer">
+        <div class="button-group mode-buttons" id="js-mode-buttons">
+          <button data-mode="study" class="button active mode-button" id="js-study">
+            STUDY
+          </button>
+          <button data-mode="short_break" class="button mode-button" id="js-short-break">
+            SHORT BREAK
+          </button>
+          <button data-mode="long_break" class="button mode-button" id="js-long-break">
+            LONG BREAK
+          </button>
+        </div>
+        <div class="clock" id="js-clock">
+          <span id="js-minutes">25</span>
+          <span class="separator">:</span>
+          <span id="js-seconds">00</span>
+        </div>
+        <button class="main-button" data-action="start" id="js-btn">
+          Start
+        </button>
+      </div>
+    </main>
+  </body>

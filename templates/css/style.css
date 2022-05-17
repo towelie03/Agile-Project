@@ -11,10 +11,6 @@
     color: var(--not-black);
 }
 
-/* .dark-theme {
-    background-color: var(black);
-} */
-
 * {
     margin: 0;
     padding: 0;
@@ -98,27 +94,6 @@
     line-height: 1.5;
 }
 
-
-/* .app {
-
-}
-
- .container {}
-
-.header-logo {}
- */
-
-/* NAVIGATION */
-nav {
-    height: auto;
-    width: 100%;
-    margin: 0 auto;
-    background-color: #dddddd;
-    font-family: "Aresenal", sans-serif;
-    position: sticky;
-    top: 0px;
-}
-
 .nav_link_list {
     display: flex;
     top: 1em;
@@ -154,26 +129,28 @@ nav {
 html {
     box-sizing: border-box;
 }
-  
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
-  
+
 :root {
-    --study: hsl(0, 90%, 72%);
-    --short_break: hsl(48, 67%, 49%);
+    --background-image: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
+    --short_break: hsl(48, 88%, 41%);
     --long_break: hsl(105, 77%, 66%);
 }
-  
+
 .timer_body {
-    background-color: var(--study);
+    background-color: var(--background-image);
     transition: background-color 1s ease;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     user-select: none;
 }
-  
+
 .timer {
     position: absolute;
     top: 50%;
@@ -182,7 +159,7 @@ html {
     padding: 20px;
     text-align: center;
 }
-  
+
 .clock {
     margin-top: 50px;
     margin-bottom: 30px;
@@ -196,7 +173,7 @@ html {
 span {
     font-size: 16rem;
 }
-  
+
 .mode-button {
     font-size: 20px;
     font-family: 'Rubik', sans-serif;
@@ -211,11 +188,11 @@ span {
     padding: 2px 12px;
     background: none;
 }
-  
+
 .mode-button.active {
     border-color: black;
 }
-  
+
 .main-button {
     cursor: pointer;
     font-family: 'Rubik', sans-serif;
@@ -234,24 +211,25 @@ span {
     border-radius: 4px;
     transition: color 0.5s ease-in-out 0s;
 }
-  
-button:focus, button:active {
+
+button:focus,
+button:active {
     outline: none;
 }
-  
+
 .main-button.active {
     transform: translateY(6px);
     box-shadow: none;
     outline: none;
 }
-  
+
 .hidden {
     display: none;
 }
-  
+
 @media screen and (max-width: 550px) {
     .clock {
-      font-size: 8rem;
+        font-size: 8rem;
     }
 }
 
@@ -287,152 +265,6 @@ input[type=text] {
     padding: 50px;
 }
 
-/* REFERENCE CODE FOR FUTURE POTENTIAL USE */
-
-/* LEADING TITLES
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #171a1b;
-    text-align: left;
-    padding-left: 0.5em;
-    line-height: 2;
-}
-
-h1 {
-    font-size: 10em;
-    font-family: "Aresenal", sans-serif;
-    letter-spacing: -0.07em;
-    padding-right: 1em;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-}
-
-/* CLASSES */
-/* .BCIT {
-    font-family: "Poppins", sans-serif;
-    margin: 0.4em;
-    font-weight: 400;
-    padding-left: 1.105em;
-}
-
-.PROJECT {
-    font-family: "Poppins", sans-serif;
-    margin: 0.4em;
-    font-weight: 400;
-    padding-left: 1.105em;
-}
-
-.BLOG {
-    font-family: "Poppins", sans-serif;
-    margin: 0.4em;
-    font-weight: 400;
-    padding-left: 1.105em;
-}
-
-.BLOGNAV {
-    margin: 0px;
-    color: #171a1b;
-    font-weight: 700;
-    color: #ececec;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: opacity 300ms ease;
-}
-
-.hobbies {
-    padding-bottom: 5em;
-    padding-right: 70em;
-}
-
-.align {
-    display: flex;
-    flex-direction: row;
-    padding-right: 55.5em;
-    padding-left: 1em;
-}
-
-.VAR {
-    display: flex;
-    flex-direction: row;
-    padding-left: 1em;
-    padding-bottom: 1em;
-    padding-right: 55.5em;
-}
-
-.JAVA {
-    width: 100%;
-    padding-left: 1em;
-}
-
-.NFT {
-    padding-left: 1em;
-}
-
-.REFERENCE {
-    padding-left: 1em;
-}
-
-.blog-hover {
-    background-color: black;
-}
-
-/*  MISCELLANEOUS */
-/* body {
-    background-color: #171a1b;
-}
-
-li {
-    padding-left: 1em;
-    font-family: "Aresenal", sans-serif;
-}
-
-p {
-    display: flex;
-    flex-direction: row;
-    /* padding-right: 58em;
-    padding-left: 1em; */
-/* font-size: 16px;
-
-    font-family: "Noto Serif Display", serif;
-}
-
-pre code {
-    font-family: monospace;
-    border: 1px solid #171a1b;
-    display: block;
-    padding: 20px;
-    background-color: #171a1b;
-    color: #ececec;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-a:visited {
-    color: #0000;
-}
-
-a:hover {
-    color: #5e008a;
-}
-
-a:link {
-    color: #171a1b;
-}   */
-
-
 .light-theme {
     background-color: var(--not-white);
     color: var(--not-black);
@@ -449,12 +281,12 @@ a:link {
     box-sizing: border-box;
 }
 
+
 .login-page {
     height: 100vh;
     display: flex;
     font-family: 'Quicksand', sans-serif;
 }
-
 
 /* calendar stuff */
 button {
@@ -473,7 +305,7 @@ select {
     background-color: #FAFAFA;
 }
 
-select::-ms-expand{
+select::-ms-expand {
     display: none;
 }
 
@@ -483,7 +315,7 @@ input {
     appearance: none;
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
@@ -496,7 +328,8 @@ option {
     padding: 10px;
 }
 
-#cal-head, #cal-body {
+#cal-head,
+#cal-body {
     display: flex;
     justify-content: space-around;
     border: 2px solid #f4f4f4;

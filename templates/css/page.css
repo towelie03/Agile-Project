@@ -9732,7 +9732,7 @@ div.zabuto_calendar div.legend span.badge {
 body,
 html {
     margin: 0;
-    padding: 0
+    padding-top: 30px;
 }
 
 body,
@@ -10909,7 +10909,7 @@ header {
     flex-flow: row wrap;
     -ms-flex-line-pack: center;
     align-content: center;
-    top: 0;
+    padding-top: 100px;
     left: 0;
     z-index: 8;
     padding: 74px 25px;
@@ -11318,7 +11318,6 @@ footer {
 .hero-bg,
 .hero-pattern-bg {
     position: absolute;
-    top: 0;
     left: 50%;
     transform: translateX(-50%)
 }

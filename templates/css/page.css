@@ -9850,7 +9850,7 @@ section {
     position: relative
 }
 
-section.home-hero {
+/* section.home-hero {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: 50%;
@@ -9859,7 +9859,7 @@ section.home-hero {
     align-items: center;
     height: 640px;
     background-image: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb)
-}
+} */
 
 @media (min-width: 768px) {
     section.home-hero {

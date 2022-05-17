@@ -18,6 +18,17 @@
     box-sizing: border-box;
 }
 
+section.home-hero {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: 50%;
+    justify-content: 50%;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 640px;
+    background-image: linear-gradient(to top right, #242226, #3f3860, #c55221)
+}
+
 
 /* Darkmode */
 
@@ -139,7 +150,7 @@ html {
 }
 
 :root {
-    --background-image: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
+    --background-image: linear-gradient(to top right, #000000, #000000, #000000);
     --short_break: hsl(48, 88%, 41%);
     --long_break: hsl(105, 77%, 66%);
 }

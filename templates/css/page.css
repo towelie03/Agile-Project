@@ -9714,7 +9714,7 @@ div.zabuto_calendar div.legend span.badge {
 
 .error-text h1,
 .header-menu .nav .nav-item .nav-link,
-.hero-text h1,
+/* .hero-text h1, */
 .maintenance-wrapper h2,
 .maintenance-wrapper p,
 .resource-detail-content h1,
@@ -9732,7 +9732,7 @@ div.zabuto_calendar div.legend span.badge {
 body,
 html {
     margin: 0;
-    padding-top: 30px;
+    padding: 0
 }
 
 body,
@@ -9863,13 +9863,14 @@ section {
 
 @media (min-width: 768px) {
     section.home-hero {
-        height: 592px
+        height: 100%;
+        width: 100%
     }
 }
 
 @media (min-width: 992px) {
     section.home-hero {
-        height: 710px
+        height: 100%
     }
 }
 
@@ -9881,7 +9882,8 @@ section {
 
 @media (min-width: 1999.98px) {
     section.home-hero {
-        height: 1040px
+        height: 100%;
+
     }
 }
 
@@ -10909,7 +10911,7 @@ header {
     flex-flow: row wrap;
     -ms-flex-line-pack: center;
     align-content: center;
-    padding-top: 100px;
+    top: 0;
     left: 0;
     z-index: 8;
     padding: 74px 25px;
@@ -10931,7 +10933,7 @@ header {
     padding: 5px 0;
     font-family: Montserrat, sans-serif;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 30px;
     line-height: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -11163,7 +11165,6 @@ footer {
     transform: translateX(-50%)
 }
 
-
 .footer-white-mask img {
     display: block;
     width: 100%
@@ -11221,6 +11222,7 @@ footer {
     margin: 0 auto
 }
 
+/* 
 .footer-text p {
     margin: 0;
     font-family: Playfair Display, serif;
@@ -11229,11 +11231,11 @@ footer {
     line-height: 1.358;
     letter-spacing: 1.88px;
     color: #fff
-}
+} */
 
 @media (min-width: 1200px) {
     .footer-text p {
-        font-size: 50px
+        font-size: 100px;
     }
 }
 
@@ -11283,13 +11285,14 @@ footer {
 
 .social-wrapper a i {
     display: block;
-    font-size: 14px;
+    font-size: 100px;
+    ;
     line-height: 1
 }
 
 @media (min-width: 1200px) {
     .social-wrapper a i {
-        font-size: 26px
+        font-size: 100px;
     }
 }
 
@@ -11313,12 +11316,12 @@ footer {
 .hero-bg {
     width: 100%;
     height: 100%;
-    z-index: 0
 }
 
 .hero-bg,
 .hero-pattern-bg {
     position: absolute;
+    top: 0;
     left: 50%;
     transform: translateX(-50%)
 }
@@ -11582,18 +11585,20 @@ footer {
     width: 100%
 }
 
-.hero-text {
+/* 
+/* .hero-text {
     width: 100%;
     margin: 0 auto
-}
+} */
 
 .hero-text h1 {
     font-family: Playfair Display, serif;
     font-weight: 700;
-    font-size: 55px;
+    font-size: 100px;
     line-height: 1;
     letter-spacing: -1px;
     text-align: center;
+    padding-top: 100px;
     color: #fff
 }
 
@@ -11623,19 +11628,20 @@ footer {
     text-align: center
 }
 
-@media (min-width: 768px) {
+*/
+/* @media (min-width: 768px) {
     .hero-text p {
         max-width: 100%;
         margin: 30px auto 0;
         font-size: 18px
     }
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .hero-text {
         margin: 0
     }
-}
+} */
 
 .hero-button {
     position: relative;
@@ -14105,7 +14111,7 @@ footer {
     }
 }
 
-.blog-hero-text {
+/* .blog-hero-text {
     position: absolute;
     z-index: 4;
     top: 208px;
@@ -14113,48 +14119,18 @@ footer {
     width: 100%;
     text-align: center;
     transform: translateX(-50%)
-}
+} */
 
-.blog-hero-text h1 {
+/* .blog-hero-text h1 {
     margin: 0;
     font-family: Playfair Display, serif;
-    font-size: 55px;
+    font-size: 100px;
     line-height: 1.15;
     letter-spacing: -1px;
     color: #fff
-}
+} */
 
-@media (min-width: 768px) {
-    .blog-hero-text h1 {
-        font-size: 76px
-    }
-}
 
-@media (min-width: 1200px) {
-    .blog-hero-text h1 {
-        font-size: 105px;
-        line-height: 1;
-        letter-spacing: -4.2px
-    }
-}
-
-@media (min-width: 768px) {
-    .blog-hero-text {
-        top: 200px
-    }
-}
-
-@media (min-width: 992px) {
-    .blog-hero-text {
-        top: 260px
-    }
-}
-
-@media (min-width: 1200px) {
-    .blog-hero-text {
-        top: 292px
-    }
-}
 
 .blogs .container {
     position: relative;

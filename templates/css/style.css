@@ -6,6 +6,7 @@
     --lrg-txt: 2.2rem;
 }
 
+
 .light-theme {
     background-color: var(--not-white);
     color: var(--not-black);
@@ -19,13 +20,6 @@
 }
 
 section.home-hero {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: 50%;
-    justify-content: 50%;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 640px;
     background-image: linear-gradient(to top right, #222226, #35218d, #9c21c5)
 }
 

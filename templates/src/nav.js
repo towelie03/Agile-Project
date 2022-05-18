@@ -48,7 +48,7 @@ nav_div.insertAdjacentHTML("beforebegin",
 </header>
 
 
-<button class="dark-mode-toggle" onclick="LDmode()">|</button>
+<!-- <button class="dark-mode-toggle" onclick="LDmode()">|</button> -->
 </nav>
 `
 )

@@ -104,6 +104,111 @@ p {
     margin-bottom: 1rem
 }
 
+.footer-white-mask {
+    position: absolute;
+    z-index: 10;
+    top: -8px;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translateX(-50%)
+}
+
+.footer-white-mask img {
+    display: block;
+    width: 100%
+}
+
+
+@media (min-width: 1999.98px) {
+    .footer-white-mask .footer-white-mask__default {
+        display: none
+    }
+}
+
+.footer-white-mask .footer-white-mask__large {
+    display: none
+}
+
+@media (min-width: 1999.98px) {
+    .footer-white-mask .footer-white-mask__large {
+        display: block
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-white-mask {
+        top: -14px;
+        width: 1340px
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .footer-white-mask {
+        top: -98px;
+        width: 1920px
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-white-mask-up {
+        top: -98px;
+        width: 1920px
+    }
+}
+
+.footer-white-mask-up {
+    position: absolute;
+    z-index: 10;
+    top: -8px;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translateX(-50%)
+}
+
+.footer-white-mask-up img {
+    display: block;
+    width: 100%
+}
+
+
+@media (min-width: 1999.98px) {
+    .footer-white-mask-up .footer-white-mask__default {
+        display: none
+    }
+}
+
+.footer-white-mask-up .footer-white-mask__large {
+    display: none
+}
+
+@media (min-width: 1999.98px) {
+    .footer-white-mask-up .footer-white-mask__large {
+        display: block
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-white-mask-up {
+        top: -1px;
+        width: 1900px
+    }
+}
+
+/* @media (min-width: 1999.98px) {
+    .footer-white-mask {
+        width: 2780px
+    }
+} */
+
+/* @media (min-width: 2700px) {
+    .footer-white-mask {
+        width: 100%
+    }
+} */
+
 abbr[data-original-title],
 abbr[title] {
     text-decoration: underline;
@@ -9750,7 +9855,7 @@ body {
 .app {
     position: relative;
     overflow-x: hidden;
-    min-height: 40em
+    min-height: 55em;
 }
 
 .app.fixed {
@@ -9861,7 +9966,7 @@ section {
     background-image: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb)
 } */
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
     section.home-hero {
         height: 100%;
         width: 100%
@@ -9878,7 +9983,7 @@ section {
     section.home-hero {
         height: 820px
     }
-} */
+}
 
 
 @media (max-width: 1440px) {
@@ -10878,7 +10983,7 @@ header {
 @media (min-width: 768px) {
     .header-section {
         height: 64px;
-        padding: 0
+        padding-top: 5em;
     }
 }
 
@@ -10980,12 +11085,13 @@ header {
 }
 
 .header-menu .nav.nav-light .nav-item .nav-link {
-    opacity: .7
+    opacity: .9;
+    font-size: 1.5em;
 }
 
 @media (min-width: 992px) {
     .header-menu .nav.nav-light .nav-item .nav-link {
-        color: #fff
+        color: white
     }
 }
 
@@ -11157,12 +11263,13 @@ footer {
     }
 }
 
-.footer-white-mask {
+/* .footer-white-mask {
     position: absolute;
-    z-index: 1;
-    /* top: -8px; */
+    z-index: 10;
+    top: -8px;
     left: 50%;
-    width: 727px;
+    width: 100%;
+    height: auto;
     transform: translateX(-50%)
 }
 
@@ -11212,7 +11319,7 @@ footer {
     .footer-white-mask {
         width: 100%
     }
-}
+} */
 
 .footer-container {
     position: relative;
@@ -11600,8 +11707,9 @@ footer {
     line-height: 1;
     letter-spacing: -1px;
     text-align: center;
-    padding-top: 100px;
-    color: #fff
+    padding-top: 175px;
+    color: #fff;
+    opacity: .9;
 }
 
 .hero-text h1 span.red {
@@ -11627,7 +11735,8 @@ footer {
     margin: 15px auto 0;
     color: #fff;
     font-size: 14px;
-    text-align: center
+    text-align: center;
+    opacity: .9;
 }
 
 
@@ -14140,7 +14249,7 @@ footer {
 }
 
 .blogs .container .row>div {
-    padding-left: 20px;
+    padding-left: 10px;
     padding-right: 20px
 }
 
@@ -15164,7 +15273,7 @@ footer {
     width: 100vw;
     height: 100vh;
     background: #11003d;
-    opacity: .8;
+    opacity: .9;
     z-index: 2;
     top: 0;
     transition: all .3s ease

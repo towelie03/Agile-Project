@@ -184,6 +184,14 @@ html {
     text-align: center;
 }
 
+.timer2 {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 .clock {
     margin-top: 50px;
     margin-bottom: 30px;

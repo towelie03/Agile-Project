@@ -149,6 +149,26 @@ html {
     --long_break: hsl(105, 77%, 66%);
 }
 
+/* .app {
+    position: relative;
+    overflow-x: hidden;
+
+} */
+
+/* .app.fixed {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    overflow: hidden
+} */
+
+/* @media (max-width: 767.98px) {
+    body.stuck-mobile .app {
+        height: 100vh !important;
+        overflow: hidden
+    }
+} */
+
 .timer_body {
     background-color: var(--study);
     transition: background-color 1s ease;
@@ -159,9 +179,8 @@ html {
 .timer {
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
     text-align: center;
 }
 

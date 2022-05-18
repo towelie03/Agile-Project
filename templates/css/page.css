@@ -9855,7 +9855,7 @@ body {
 .app {
     position: relative;
     overflow-x: hidden;
-    min-height: 55em;
+    min-height: 36em;
 }
 
 .app.fixed {

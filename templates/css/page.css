@@ -9855,7 +9855,7 @@ body {
 .app {
     position: relative;
     overflow-x: hidden;
-    min-height: 36em;
+    min-height: 38em;
 }
 
 .app.fixed {
@@ -11734,7 +11734,7 @@ footer {
     max-width: 300px;
     margin: 15px auto 0;
     color: #fff;
-    font-size: 14px;
+    /* font-size: 14px; */
     text-align: center;
     opacity: .9;
 }
@@ -11744,7 +11744,7 @@ footer {
     .hero-text p {
         max-width: 100%;
         margin: 30px auto 0;
-        font-size: 18px
+        font-size: 24px
     }
 }
 

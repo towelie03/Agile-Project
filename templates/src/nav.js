@@ -17,11 +17,11 @@ nav_div.insertAdjacentHTML("beforebegin",
             </div>
             <div class="header-menu">
               <ul class="nav nav-light">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="about">
                     About
                   </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <a class="nav-link" href="story">
                     Story

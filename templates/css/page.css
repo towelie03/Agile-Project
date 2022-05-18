@@ -11628,20 +11628,20 @@ footer {
     text-align: center
 }
 
-*/
-/* @media (min-width: 768px) {
+
+@media (min-width: 768px) {
     .hero-text p {
         max-width: 100%;
         margin: 30px auto 0;
         font-size: 18px
     }
-} */
+}
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
     .hero-text {
         margin: 0
     }
-} */
+}
 
 .hero-button {
     position: relative;

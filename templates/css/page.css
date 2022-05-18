@@ -11754,6 +11754,62 @@ footer {
     }
 }
 
+
+.hero-text-new h1 {
+    font-family: Playfair Display, serif;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 1;
+    letter-spacing: -1px;
+    text-align: center;
+    padding-top: 120px;
+    color: #fff;
+    opacity: .9;
+
+}
+
+.hero-text-new h1 span.red {
+    color: #ef4b6c
+}
+
+@media (min-width: 768px) {
+    .hero-text-new h1 {
+        font-size: 80px
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-text-new h1 {
+        font-size: 105px;
+        letter-spacing: -1.8px
+    }
+}
+
+.hero-text-new p {
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto 0;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    opacity: .9;
+}
+
+
+@media (min-width: 768px) {
+    .hero-text-new p {
+        max-width: 100%;
+        margin: 30px auto 0;
+        font-size: 18px
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-text-new {
+        margin: 0
+    }
+}
+
 .hero-button {
     position: relative;
     height: 90px;

@@ -144,13 +144,13 @@ html {
 }
 
 :root {
-    --background-image: linear-gradient(to top right, #000000, #000000, #000000);
+    --study: hsl(105, 77%, 66%);
     --short_break: hsl(48, 88%, 41%);
     --long_break: hsl(105, 77%, 66%);
 }
 
 .timer_body {
-    background-color: var(--background-image);
+    background-color: var(--study);
     transition: background-color 1s ease;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     user-select: none;

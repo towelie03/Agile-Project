@@ -457,13 +457,13 @@ a:link {
 
 
 /* calendar stuff */
-button {
+.calendar button {
     border: none;
     background-color: #FAFAFA;
     font-size: 15px;
 }
 
-select {
+.calendar select {
     appearance: none;
     padding: 5px;
     border: none;
@@ -473,33 +473,38 @@ select {
     background-color: #FAFAFA;
 }
 
-select::-ms-expand{
+.calendar select::-ms-expand{
     display: none;
 }
 
-input {
+.calendar input {
     border: none;
-    background: #FAFAFA;
+    background: #fafafa;
     appearance: none;
 }
 
-input:focus{
+.calendar input:focus{
     outline: none;
 }
 
 option {
-    background: #f4f4f4;
+    background: #fafafa;
     font-size: 20px;
 }
 
 .calendar {
+    width: 75%;
     padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    background: #FAFAFA;
 }
 
 #cal-head, #cal-body {
     display: flex;
     justify-content: space-around;
-    border: 2px solid #f4f4f4;
+    border: 2px solid black;
     padding: 10px;
 }
 
@@ -511,7 +516,7 @@ table {
 }
 
 thead {
-    background: #f7f7f7;
+    background: #FAFAFA;
     width: 100%;
     text-align: center;
 }
@@ -536,15 +541,9 @@ td {
     font-size: 30px;
 }
 
-.main {
-    display: flex;
-    flex-direction: row-column;
-    flex-grow: 1;
-    background-color: var(--bg-color);
-}
-
 .popup-container {
     position: absolute;
     text-align: center;
     width: 100%;
+    top: 90%;
 }

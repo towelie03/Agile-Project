@@ -26,7 +26,6 @@ function navs() {
         nav_link_a 
         ">Login/Signup</a>
       </li>
-      <button class="dark-mode-toggle" onclick="LDmode()">|</button>
     </nav>
     `
   )

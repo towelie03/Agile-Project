@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Login</title>
 </head>
-<body>
+<body id="loginpage">
   <header>
     <div id="navbar">
     </div>
@@ -24,16 +24,16 @@
   <div class="login-page light-theme">
     <div class="form">
       <form>
-        <input type="text" placeholder="&#xf007;  username" />
-        <input type="password" id="password" placeholder="&#xf023;  password" required />
+        <input type="text" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" required />
         <i class="fas fa-eye" onclick="show()"></i>
         <br>
         <br>
-        <button>LOGIN</button>
+        <button class="loginbtn">LOGIN</button>
         <p class="message"></p>
       </form>
       <form class="login-form">
-        <button type="button" onclick="window.location.href='signup.html'">
+        <button class="signupbtn" type="button" onclick="window.location.href='signup.html'">
           SIGN UP
         </button>
       </form>

@@ -267,15 +267,32 @@ button:focus, button:active {
     border-radius: 5px;
 }
 
-input[type=text] {
-    width: 50%;
+input[type=text], input[type=password] {
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
     border: 1px solid #ccc;
+    display: inline-block;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
 }
+
+.loginbtn, .signupbtn {
+    border: none;
+}
+
+.form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loginpage {
+    text-align: center;
+}
+
 
 .custom-title {
     font-size: 30px;

@@ -16,32 +16,25 @@
   <script defer src="src/nav.js"></script>
   <script defer src="src/app.js"></script>
   <script defer src="src/script.js"></script>
-  <script defer src="../config/db.js"></script>
   <title>signup</title>
 </head>
 
-<button onclick="LDmode()">Toggle dark mode</button>
+
 
 <body>
-
+<div id="navbar">
   <div class="login-page light-theme">
-    <div class="form" method="post" action="/signup>"
-      <form action="Add User to DB" method="post">
-      <input type="username" id="username" placeholder="Username" required />
-      <i class="fas fa-eye" onclick="show()"></i>
-      <br>
-      <br>
-      </form>
-
-      <form class="login-form">
-        <button type="button" onclick= insertDB()>
-          SIGN UP
-        </button>
-      </form>
-    </div>
+    <form action="/logged-in" method="post">
+        <label for="Username">Username</label>
+        <input type="text" placeholder="Username" name="Username" />
+      <button type="submit">
+        Sign Up
+      </button>
+    </form>
   </div>
+</div>
 </body>
-<script>
+<!-- <script>
   var check = false
   function show() {
     var password = document.getElementById("password");
@@ -55,5 +48,5 @@
     }
   }
   var check = false
-</script>
+</script> -->
 </body>

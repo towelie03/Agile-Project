@@ -3,15 +3,10 @@ const { Schema } = mongoose;
 
 
 const userModel = new Schema({
-    uname: { 
-      type: String, 
-      required: true,
-      minlength: 5,
-      maxlength: 15,
-      unique: true
-    }
+    Username: { type: String },
   });
 
+const User = mongoose.model("users", userModel)
 
-export { userModel };
+export { User };
 

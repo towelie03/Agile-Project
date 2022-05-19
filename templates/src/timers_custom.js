@@ -5,10 +5,6 @@ var timer = {
     lb_interval: 3,
 }
 
-function resetter() {
-    document.getElementById('ctm-form').reset();
-}
-
 function customizer() {
     var ctm_study = document.getElementById('study')
     var ctm_short_break = document.getElementById('short-break')
@@ -31,6 +27,7 @@ function customizer() {
     timer['long_break'] = ctm_long_break
 
     switcher('study');
+    document.getElementById('ctm-form').reset();
 };
 
 let interval;

@@ -62,22 +62,16 @@
       <h1 class="custom-title">
         CUSTOMIZE THE TIMERS
       </h1>
-      <select id="Study">
-        <option value="jan">JANUARY</option>
-        <option value="feb">FEBRUARY</option>
-        <option value="mar">MARCH</option>
-        <option value="apr">APRIL</option>
-        <option value="may">MAY</option>
-        <option value="june">JUNE</option>
-        <option value="july">JULY</option>
-        <option value="aug">AUGUST</option>
-        <option value="sept">SEPTEMBER</option>
-        <option value="oct">OCTOBER</option>
-        <option value="nov">NOVEMBER</option>
-        <option value="dec">DECEMBER</option>
-      </select>
-      <button class ="main-button" id="custom-btn">
-        Custom
+      <form id="ctm-form">
+        <input type="text" id="study" placeholder="Study Timer">
+        <input type="text" id="short-break" placeholder="Short Break">
+        <input type="text" id="long-break" placeholder="Long Break">
+      </form>
+      <button class ="main-button" id="custom-btn" onclick="customizer();">
+        Customize
+      </button>
+      <button class ="main-button" id="custom-btn" onclick="resetter();">
+        Reset
       </button>
     </div>
     <div class="calendar">

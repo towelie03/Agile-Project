@@ -5,54 +5,33 @@ var timer = {
     lb_interval: 3,
 }
 
-const custom = document.getElementById('custom-btn');
-custom.addEventListener('click', () => {
-    const ctm_study = document.getElementById('study')
-    const ctm_short_break = document.getElementById('short-break')
-    const ctm_long_break = document.getElementById('long-break')
+function resetter() {
+    document.getElementById('ctm-form').reset();
+}
 
-    if (ctm_study.value > 60) {
-        timer['study'] = 60
-    } else {
-        timer['study'] = ctm_study.value
-    }
+function customizer() {
+    var ctm_study = document.getElementById('study')
+    var ctm_short_break = document.getElementById('short-break')
+    var ctm_long_break = document.getElementById('long-break')
 
-    if (ctm_short_break.value > 60) {
-        timer['short_break'] = 60
-    } else {
-        timer['short_break'] = ctm_short_break.value
-    }
+    ctm_study = ctm_study.value
+    ctm_short_break = ctm_short_break.value
+    ctm_long_break = ctm_long_break.value
 
-    if (ctm_long_break.value > 60) {
-        timer['long_break'] = 60
-    } else {
-        timer['long_break'] = ctm_long_break.value
-    }
+    ctm_study = Number(ctm_study)
+    ctm_short_break = Number(ctm_short_break)
+    ctm_long_break = Number(ctm_long_break)
 
-    if (ctm_study.value < 1) {
-        timer['study'] = 1
-    } else {
-        timer['study'] = ctm_study.value
-    }
+    ctm_study = Math.min(60, Math.max(1, ctm_study))
+    ctm_short_break = Math.min(60, Math.max(1, ctm_short_break))
+    ctm_long_break = Math.min(60, Math.max(1, ctm_long_break))
 
-    if (ctm_short_break.value < 1) {
-        timer['short_break'] = 1
-    } else {
-        timer['short_break'] = ctm_short_break.value
-    }
-
-    if (ctm_long_break.value < 1) {
-        timer['long_break'] = 1
-    } else {
-        timer['long_break'] = ctm_long_break.value
-    }
+    timer['study'] = ctm_study
+    timer['short_break'] = ctm_short_break
+    timer['long_break'] = ctm_long_break
 
     switcher('study');
-
-    ctm_study.value = '';
-    ctm_short_break.value = '';
-    ctm_long_break.value = '';
-});
+};
 
 let interval;
 

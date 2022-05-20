@@ -69,6 +69,7 @@ function updateCalendar() {
 
         if (month_index == month && year_input.value == year && day == i) {
             td.style.backgroundColor = "grey";
+            td.style.color = "white";
         }
 
         tr.appendChild(td);

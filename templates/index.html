@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
-      rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
-    <link href="css/style.css" type="text/css" rel="stylesheet"/>
-    <script defer src="src/timers.js"></script>
-    <script defer src="src/nav.js" ></script>
-    <title>Timers</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="src/script.js"></script>
+  <script defer src="src/timers.js"></script>
+  <link rel="stylesheet" href="css/page.css">
+  <script defer src="src/nav2.js"></script>
+  <title>index</title>
 </head>
-<body class="timer_body">
-  <header>
-    <div id="navbar">
+<header>
+  <div id="navbar">
+  </div>
+</header>
+
+<body>
+  <!-- section is for seperating the pages -->
+  <section class="home-hero">
+    <div class="hero-bg">
+      <div class="hero-pattern-bg">
+        <img class="hero-pattern-img__default" src="img/hero-pattern-bg-copy.png">
+        <img class="hero-pattern-img__large" src="img/hero-pattern-bg-lg.png">
+      </div>
     </div>
-  </header>
+
+    <!-- <div class="hero-overlay"> -->
+    <!-- <div class="hero-section"> -->
+
+    <!-- <div class="hero-container"> -->
+    <div class="hero-text">
+      <!-- HEROTEXT H1 -->
+      <h1>Pomodoro Story</h1>
+      <p>The story of your studies</p>
+    </div>
+
+    <section>
+      <div class="footer-white-mask">
+        <img class="footer-white-mask__large" src="img/footer-white-mask-down.png"> <img class="footer-white-mask-lg"
+          src="img/footer-white-mask-lg-down2.png">
+    </section>
+
+  </section>
+  </div>
   <main class="app">
     <div class="timer">
       <div class="button-group mode-buttons" id="js-mode-buttons">
-        <button
-          data-mode="study"
-          class="button active mode-button"
-          id="js-study"
-        >
-        STUDY
+        <button data-mode="study" class="button active mode-button" id="js-study">
+          STUDY
         </button>
-        <button
-          data-mode="short_break"
-          class="button mode-button"
-          id="js-short-break"
-        >
-        SHORT BREAK
+        <button data-mode="short_break" class="button mode-button" id="js-short-break">
+          SHORT BREAK
         </button>
-        <button
-          data-mode="long_break"
-          class="button mode-button"
-          id="js-long-break"
-        >
-        LONG BREAK
+        <button data-mode="long_break" class="button mode-button" id="js-long-break">
+          LONG BREAK
         </button>
       </div>
       <div class="clock" id="js-clock">
@@ -55,7 +65,25 @@
       <button class="main-button" data-action="start" id="js-btn">
         Start
       </button>
+
     </div>
   </main>
+  <footer>
+    <!-- z index for layers -->
+    <!-- position relative -->
+    <div class="footer-white-mask-up">
+      <img class="footer-white-mask__large" src="img/footer-white-mask.png">
+      <img class="footer-white-mask-lg" src="img/footer-white-mask-lg.png">
+      <div class="hero-text-new">
+        <h1>Agile 2911</h1>
+        <p>Created By</p>
+        <p>Erica, Ayman, Tristan, Daryush, Benny, Andrew</p>
+      </div>
+    </div>
+    <div class="footer-bg">
+      <img class="footer-pattern-bg__large" src="img/footer-pattern-bg.png">
+    </div>
+  </footer>
 </body>
+
 </html>

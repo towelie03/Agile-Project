@@ -12,11 +12,6 @@ function navs() {
       ">Home</a>
       </li>
       <li class="nav_link">
-      <a href="about" class="
-        nav_link_a
-        ">About</a>
-      </li>
-      <li class="nav_link">
       <a href="story" class="
         nav_link_a
         ">Story</a>

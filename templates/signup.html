@@ -24,9 +24,11 @@
 <body>
 <div id="navbar">
   <div class="login-page light-theme">
-    <form action="/logged-in" method="post">
+    <form action="/signup" method="post">
         <label for="Username">Username</label>
-        <input type="text" placeholder="Username" name="Username" />
+        <input type="Username" placeholder="Username" name="Username" />
+        <label for="Password">Password</label>
+        <input type="Password" placeholder="Password" name="Password" />
       <button type="submit">
         Sign Up
       </button>
@@ -34,19 +36,4 @@
   </div>
 </div>
 </body>
-<!-- <script>
-  var check = false
-  function show() {
-    var password = document.getElementById("password");
-    var icon = document.querySelector(".fas");
-
-    // ========== Checking type of password ===========
-    if (password.type === "password") {
-      password.type = "text";
-    } else {
-      password.type = "password";
-    }
-  }
-  var check = false
-</script> -->
 </body>

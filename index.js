@@ -7,6 +7,10 @@ import { MongoClient } from 'mongodb';
 import mongoose from 'mongoose';
 import bcryptjs from 'bcryptjs'
 import Jwt from 'jsonwebtoken';
+import passport from 'passport'; 
+import bcrypt from 'bcryptjs'
+
+
 
 const uri = "mongodb+srv://admin:Password@agile.ja8u2.mongodb.net/tester?retryWrites=true";
 // const uri = 'mongodb://localhost:27017/tester'
@@ -23,22 +27,12 @@ app.use(express.json());
 
 app.use(bp.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, "templates")))
+app.use(express.static(path.join(__dirname, "views")));
 
 
-//// SIGN UP FUNCTION ////
-// const signup = async (req,res) =>{
-// 	const {Username, Password} = req.body
-// 	bcryptjs.hash(Password)
-// 	const body = req.body
-// 	const user = await new User({
-// 		Username:Username,
-// 		Password:Password
-// 	});
-// 	await user.save()
-// 	console.log(user)
-// 	res.redirect("/login")
-// }
+app.set('view engine', 'ejs');
+
+
 
 //// PASSWORD VERIFIER ////
 // const verifier = async (req, res, user) => {
@@ -70,57 +64,85 @@ app.use(express.static(path.join(__dirname, "templates")))
 router
 	.route("/")
 	.get((req, res) => {
-		res.sendFile(path.join(__dirname + "/templates/index.html"));
+		res.sendFile(path.join(__dirname + "/views/index.html"));
 	})
 
 router
 	.route("/about")
 	.get((req, res) => {
-		res.sendFile(path.join(__dirname + "/templates/about.html"));
+		res.sendFile(path.join(__dirname + "/views/about.html"));
 	})
 
 router
 	.route("/story")
 	.get((req, res) => {
-		res.sendFile(path.join(__dirname + "/templates/story.html"));
+		res.sendFile(path.join(__dirname + "/views/story.html"));
 	})
 
 router
 	.route("/login")
 	.get((req, res) => {
-		res.sendFile(path.join(__dirname + "/templates/login.html"));
+		res.render("login",{
+		Username: "",
+		Password: ""});
 	})
 	.post(bp.urlencoded({ extended: true }), async (req, res) => {
-		const { Username, Password } = req.body;
-		User.findOne({Username: Username, Password: Password}, (user, err) => {
-			if(err){
-				console.log(err)
+		const Username = req.body.Username;
+		const Password = req.body.Password;
+		
+		const userCheck = await User.findOne({Username:Username})
+			if(userCheck){
+				const passCheck = await bcrypt.compare(Password, userCheck.Password);
+				if(passCheck){
+					console.log("Successful login")
+					res.redirect('/timers')
+
+				}
+				if(!passCheck){
+					console.log("Password Incorrect")
+				}
 			}
-			if(!user){
-				console.log("Account not found");
+			if(!userCheck){
+				console.log("User doesn't exist")
+				res.redirect("/signup")		
 			}
-			else{
-			console.log("Logged in")
-			res.redirect("/timers")}
-		})
+
 	})
 
 router
 	.route("/signup")
 	.get((req, res) => {
-		res.sendFile(path.join(__dirname + "/templates/signup.html"));
+		res.render("signup", {
+			Username:"",
+			Password: "",
+		});
 	})
 	.post(bp.urlencoded({extended: true}), async (req, res) => {
-		const { Username, Password } = req.body;
-		const hashed = await bcryptjs.hash(Password,8)
-		const user = await new User({Username: Username, Password: hashed});
-		await user.save()
-		console.log("User successfully created")
-		console.log(user)
-		res.redirect("/login")})
+		const Username = req.body.Username;
+		const Password = req.body.Password;
+		const hashedPass = await bcrypt.hash(Password, 10)
+		const user = await new User({Username: Username, Password: hashedPass});
+		User.findOne({Username:Username}, async (err, check) =>{
+			if(err){
+				console.log(err)
+			}
+			if(check){
+				console.log("User already exists")
+				res.redirect('/login')
+			}
+			if(!check){
+				await user.save()
+				console.log("User successfully created")
+				console.log(user)
+				res.redirect("/login")		
+			}
+
+		} )
+	}
+	)
 
 app.get("/timers", (req, res) => {
-	res.sendFile(path.join(__dirname + "/templates/timers.html"))
+	res.sendFile(path.join(__dirname + "/views/timers.html"))
 })
 
 export default app; router;

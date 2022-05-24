@@ -1,4 +1,4 @@
-const timer = {
+var timer = {
     study: 25,
     short_break: 5,
     long_break: 15,

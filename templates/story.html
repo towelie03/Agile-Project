@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,92 +24,91 @@
     </div>
   </div>
   </header>
-    <div class="timer2">
-      <div class="button-group mode-buttons" id="js-mode-buttons">
-        <button
-          data-mode="study"
-          class="button active mode-button"
-          id="js-study"
-        >
-        STUDY
-        </button>
-        <button
-          data-mode="short_break"
-          class="button mode-button"
-          id="js-short-break"
-        >
-        SHORT BREAK
-        </button>
-        <button
-          data-mode="long_break"
-          class="button mode-button"
-          id="js-long-break"
-        >
-        LONG BREAK
-        </button>
-      </div>
-      <div class="clock" id="js-clock">
-        <span id="js-minutes">25</span>
-        <span class="separator">:</span>
-        <span id="js-seconds">00</span>
-      </div>
-      <button class="main-button" data-action="start" id="js-btn">
-        Start
+  <h1 class="project">POMODORO STORY</h1>
+  <div class="timer2">
+    <div class="button-group mode-buttons" id="js-mode-buttons">
+      <button
+        data-mode="study"
+        class="button active mode-button"
+        id="js-study"
+      >
+      STUDY
+      </button>
+      <button
+        data-mode="short_break"
+        class="button mode-button"
+        id="js-short-break"
+      >
+      SHORT BREAK
+      </button>
+      <button
+        data-mode="long_break"
+        class="button mode-button"
+        id="js-long-break"
+      >
+      LONG BREAK
       </button>
     </div>
-    <div class="customization">
-      <h1 class="custom-title">
-        CUSTOMIZE THE TIMERS
-      </h1>
-      <form id="ctm-form">
-        <input type="text" id="study" placeholder="Study">
-        <input type="text" id="short-break" placeholder="Short Break">
-        <input type="text" id="long-break" placeholder="Long Break">
-      </form>
-      <button class ="main-button" id="custom-btn" onclick="customizer();">
-        Customize
-      </button>
+    <div class="clock" id="js-clock">
+      <span id="js-minutes">25</span>
+      <span class="separator">:</span>
+      <span id="js-seconds">00</span>
     </div>
-    <div class="calendar">
-      <div id="cal-head">
-        <button id="prev-month"><<</button>
-        <select id="month">
-          <option value="jan">JANUARY</option>
-          <option value="feb">FEBRUARY</option>
-          <option value="mar">MARCH</option>
-          <option value="apr">APRIL</option>
-          <option value="may">MAY</option>
-          <option value="june">JUNE</option>
-          <option value="july">JULY</option>
-          <option value="aug">AUGUST</option>
-          <option value="sept">SEPTEMBER</option>
-          <option value="oct">OCTOBER</option>
-          <option value="nov">NOVEMBER</option>
-          <option value="dec">DECEMBER</option>
-        </select>
-        <input type="number" id="year" placeholder="YEAR" min="0" max="">
-        <button id="next-month">>></button>
-      </div>
-      <div id="cal-body">
-        <table>
-          <thead>
-            <tr class="days">
-              <td id="sun">S</td>
-              <td id="mon">M</td>
-              <td id="tues">Tu</td>
-              <td id="wed">W</td>
-              <td id="thur">Th</td>
-              <td id="fri">F</td>
-              <td id="sat">Sa</td>
-            </tr>
-          </thead>
-          <tbody id="cal-days">
-          </tbody>
-        </table>
-      </div>
+    <button class="main-button" data-action="start" id="js-btn">
+      Start
+    </button>
+  </div>
+  <div class="customization">
+    <h1 class="custom-title">
+      CUSTOMIZE THE TIMERS
+    </h1>
+    <form id="ctm-form">
+      <input type="text" id="study" placeholder="Study">
+      <input type="text" id="short-break" placeholder="Short Break">
+      <input type="text" id="long-break" placeholder="Long Break">
+    </form>
+    <button class ="main-button" id="custom-btn" onclick="customizer();">
+      Customize
+    </button>
+  </div>
+  <div class="calendar">
+    <div id="cal-head">
+      <button id="prev-month"><<</button>
+      <select id="month">
+        <option value="jan">JANUARY</option>
+        <option value="feb">FEBRUARY</option>
+        <option value="mar">MARCH</option>
+        <option value="apr">APRIL</option>
+        <option value="may">MAY</option>
+        <option value="june">JUNE</option>
+        <option value="july">JULY</option>
+        <option value="aug">AUGUST</option>
+        <option value="sept">SEPTEMBER</option>
+        <option value="oct">OCTOBER</option>
+        <option value="nov">NOVEMBER</option>
+        <option value="dec">DECEMBER</option>
+      </select>
+      <input type="number" id="year" placeholder="YEAR" min="0" max="">
+      <button id="next-month">>></button>
+    </div>
+    <div id="cal-body">
+      <table>
+        <thead>
+          <tr class="days">
+            <td id="sun">S</td>
+            <td id="mon">M</td>
+            <td id="tues">Tu</td>
+            <td id="wed">W</td>
+            <td id="thur">Th</td>
+            <td id="fri">F</td>
+            <td id="sat">Sa</td>
+          </tr>
+        </thead>
+        <tbody id="cal-days">
+        </tbody>
+      </table>
     </div>
   </div>
-
   <div class="popup-container">
     <h4></h4>
     <form id="form-popup" action="#">
@@ -122,5 +121,7 @@
       <button id="btn-cancel">Cancel</button>
     </form>
   </div>
-</div>
+  <h2 class="team-name2">Project by Team "we still haven't decided a team name"</h2>
+  <h3 class="group-no2">ACIT 2911 1A/2A Team 1</h3>
 </body>
+</html>

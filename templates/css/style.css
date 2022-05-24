@@ -4,7 +4,6 @@
     padding: 0;
     font-size: 10px;
 }
-  
 
 /* NAVBAR */
 nav {
@@ -47,6 +46,48 @@ nav {
     }
 }
 
+/* INDEX */
+.project {
+    position: absolute;
+    top: 13%;
+    left: 32%;
+    font-size: 6rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.team-name {
+    position: absolute;
+    top: 87%;
+    left: 37%;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.team-name2 {
+    position: absolute;
+    top: 190%;
+    left: 37%;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.group-no {
+    position: absolute;
+    top: 92%;
+    left: 46%;
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.group-no2 {
+    position: absolute;
+    top: 195%;
+    left: 46%;
+    font-size: 1rem;
+    padding-bottom: 50px;
+    font-family: 'Rubik', sans-serif;
+}
+
 /* TIMERS */
 html {
     box-sizing: border-box;
@@ -58,16 +99,25 @@ html {
     --long_break: hsl(105, 77%, 66%);
 }
   
-.timer_body {
+.timer-body {
     background-color: var(--study);
     transition: background-color 1s ease;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     user-select: none;
 }
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
   
 .timer {
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
@@ -76,7 +126,7 @@ html {
 
 .timer2 {
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 35%;
     transform: translate(-50%, -50%);
     padding: 20px;
@@ -158,7 +208,7 @@ button:focus, button:active {
 /* CUSTOM TIMERS */
 .customization {
     position: absolute;
-    top: 45%;
+    top: 47%;
     left: 65%;
     transform: translate(-50%, -50%);
     padding: 20px;
@@ -236,10 +286,10 @@ option {
 }
 
 .calendar {
-    width: 75%;
-    padding: 40px 10px;
+    width: 80%;
+    padding: 50px 10px;
     position: absolute;
-    top: 100%;
+    top: 80%;
     left: 10%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

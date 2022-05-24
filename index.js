@@ -33,34 +33,8 @@ app.use(express.static(path.join(__dirname, "views")));
 app.set('view engine', 'ejs');
 
 
+let userID;
 
-//// PASSWORD VERIFIER ////
-// const verifier = async (req, res, user) => {
-// 	const {Username, Password} = req.body
-// 	await bcryptjs.compare(Password, user.Password, (ans) => {
-// 		if(ans){
-// 			const jw = Jwt.sign({Username:user.Username}, '12345',{expiresIn: "3h"})
-// 			console.log(`${User} signed in`)
-// 		}
-// 		else{
-// 			console.log("SIGN IN FAILED :(")
-// 		}
-// 	})
-// }
-
-//// LOGIN FUNCTION ////
-// const login = async(req,res) => {
-// 	const {Username, Password} = req.body
-// 	await User.findOne({$or: [{Username: Username}, {Password: Password}] })
-// 	.then(user => {
-// 		if(user){
-// 			verifier(user)
-// 		}
-// 		// else{
-// 		// 	console.log(`${user} doesn't exist`)
-// 		// }
-// 	})
-// }
 router
 	.route("/")
 	.get((req, res) => {
@@ -92,6 +66,7 @@ router
 		
 		const userCheck = await User.findOne({Username:Username})
 			if(userCheck){
+				userID = Username
 				const passCheck = await bcrypt.compare(Password, userCheck.Password);
 				if(passCheck){
 					console.log("Successful login")
@@ -141,8 +116,10 @@ router
 	}
 	)
 
-app.get("/timers", (req, res) => {
-	res.sendFile(path.join(__dirname + "/views/timers.html"))
+router
+.route("/timers")
+get((req, res) => {
+	res.render("timers.ejs")
 })
 
 export default app; router;

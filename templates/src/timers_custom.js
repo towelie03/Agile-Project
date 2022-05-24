@@ -5,6 +5,31 @@ var timer = {
     lb_interval: 3,
 }
 
+function customizer() {
+    var ctm_study = document.getElementById('study')
+    var ctm_short_break = document.getElementById('short-break')
+    var ctm_long_break = document.getElementById('long-break')
+
+    ctm_study = ctm_study.value
+    ctm_short_break = ctm_short_break.value
+    ctm_long_break = ctm_long_break.value
+
+    ctm_study = Number(ctm_study)
+    ctm_short_break = Number(ctm_short_break)
+    ctm_long_break = Number(ctm_long_break)
+
+    ctm_study = Math.min(60, Math.max(1, ctm_study))
+    ctm_short_break = Math.min(60, Math.max(1, ctm_short_break))
+    ctm_long_break = Math.min(60, Math.max(1, ctm_long_break))
+
+    timer['study'] = ctm_study
+    timer['short_break'] = ctm_short_break
+    timer['long_break'] = ctm_long_break
+
+    switcher('study');
+    document.getElementById('ctm-form').reset();
+};
+
 let interval;
 
 const main_button = document.getElementById('js-btn');

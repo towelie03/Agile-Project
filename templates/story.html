@@ -9,18 +9,67 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Noto+Serif+Display:wght@400;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&display=swap"
     rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="src/script.js"></script>
+  <script defer src="src/timers_custom.js"></script>
   <script defer src="src/nav.js" ></script>
   <script defer src="src/app.js"></script>
   <title>Story</title>
 </head>
-<body>
+<body class="timer_body">
   <header>
-    <div id="navbar"></div>
+    <div id="navbar">
+    </div>
   </div>
   </header>
-  <div class="login-page light-theme">
+    <div class="timer2">
+      <div class="button-group mode-buttons" id="js-mode-buttons">
+        <button
+          data-mode="study"
+          class="button active mode-button"
+          id="js-study"
+        >
+        STUDY
+        </button>
+        <button
+          data-mode="short_break"
+          class="button mode-button"
+          id="js-short-break"
+        >
+        SHORT BREAK
+        </button>
+        <button
+          data-mode="long_break"
+          class="button mode-button"
+          id="js-long-break"
+        >
+        LONG BREAK
+        </button>
+      </div>
+      <div class="clock" id="js-clock">
+        <span id="js-minutes">25</span>
+        <span class="separator">:</span>
+        <span id="js-seconds">00</span>
+      </div>
+      <button class="main-button" data-action="start" id="js-btn">
+        Start
+      </button>
+    </div>
+    <div class="customization">
+      <h1 class="custom-title">
+        CUSTOMIZE THE TIMERS
+      </h1>
+      <form id="ctm-form">
+        <input type="text" id="study" placeholder="Study">
+        <input type="text" id="short-break" placeholder="Short Break">
+        <input type="text" id="long-break" placeholder="Long Break">
+      </form>
+      <button class ="main-button" id="custom-btn" onclick="customizer();">
+        Customize
+      </button>
+    </div>
     <div class="calendar">
       <div id="cal-head">
         <button id="prev-month"><<</button>
@@ -61,7 +110,7 @@
     </div>
   </div>
 
-    <div class="popup-container">
+  <div class="popup-container">
     <h4></h4>
     <form id="form-popup" action="#">
       <select id="timer-options">
@@ -70,7 +119,7 @@
         <option value="long-break">15 mins</option>
       </select>
       <button id="btn-save">Save</button>
-      <button id="btn-cancel">cancel</button>
+      <button id="btn-cancel">Cancel</button>
     </form>
   </div>
 </div>

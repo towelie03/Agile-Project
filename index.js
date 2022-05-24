@@ -19,10 +19,6 @@ app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/index.html"));
 });
 
-app.get("/about", (req, res) => {
-	res.sendFile(path.join(__dirname + "/templates/about.html"));
-});
-
 app.get("/story", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/story.html"));
 });
@@ -34,14 +30,6 @@ app.get("/login", (req, res) => {
 app.get("/signup", (req, res) => {
 	res.sendFile(path.join(__dirname + "/templates/signup.html"));
 });
-
-app.get("/timers", (req, res) => {
-	res.sendFile(path.join(__dirname + "/templates/timers.html"))
-})
-
-app.get("/custom", (req, res) => {
-	res.sendFile(path.join(__dirname + "/templates/custom.html"))
-})
 
 export default app;
 
